@@ -2,3 +2,15 @@ img{
     width: 700px;
     height: auto;
 }
+header{
+    background-color: rgb(50, 170, 170);
+}
+article{
+    background-color: rgb(129, 88, 168);
+}
+nav{
+    background-color: rgb(95, 117, 72);
+}
+footer{
+    background-color: rgb(93, 117, 163);
+}
