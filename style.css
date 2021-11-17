@@ -19,4 +19,7 @@ header img{
     width: auto;
     position: absolute;
     right: 0%;
+
+a{
+    display: block;
 }
