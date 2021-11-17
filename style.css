@@ -14,3 +14,9 @@ nav{
 footer{
     background-color: rgb(93, 117, 163);
 }
+header img{
+    height: 200px;
+    width: auto;
+    position: absolute;
+    right: 0%;
+}
