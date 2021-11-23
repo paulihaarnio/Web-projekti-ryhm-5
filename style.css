@@ -11,14 +11,24 @@ img{
     
 }
 
+h1 {
+    margin-left: 20px;
+}
+
 header{
     background-color: #A3EAFF;
     height: 110px;
     display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 article{
-    background-color: #FFB8A3
+    background-color: #FFB8A3;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding:10px;
+    border:4px solid #FF8865 ;
 }
 
 nav{
@@ -26,7 +36,7 @@ nav{
     min-height: 150px;
     width: 150px;
     border-radius: 5px;
-    border: solid #65DCFF 3px
+    border: solid #0352fc 3px
 }
 
 footer{
@@ -43,4 +53,12 @@ header img{
 a{
     display: block;
     text-decoration: none black;
+}
+
+body{
+    background-color: rgb(204, 225, 231)
+}
+
+footer{
+    border-top: solid #0352fc 4px;
 }
