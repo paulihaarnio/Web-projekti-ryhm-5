@@ -1,7 +1,8 @@
 main { 
     background-color: antiquewhite;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
 }
 body { background-color: aqua;}
 nav { background-color: azure;} 
@@ -20,6 +21,7 @@ footer {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    
   }
   
   .sidenav a {
@@ -42,8 +44,25 @@ footer {
     font-size: 36px;
     margin-left: 50px;
   }
-  
+  #navigaatio {
+    display: flex;
+    float: right;
+    
+  }
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  #logo {
+    height: 100px;
+    width: auto;
+    padding: 10px;
+   float: right;
+    
+}
+header{
+  background-color: #A3EAFF;
+  height: 110px;
+  display: flex;
+}
