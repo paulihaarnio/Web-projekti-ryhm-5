@@ -8,11 +8,13 @@ img{
     height: 100px;
     width: auto;
     padding: 10px;
+    
 }
 
 header{
     background-color: #A3EAFF;
     height: 110px;
+    display: flex;
 }
 
 article{
