@@ -11,10 +11,15 @@ img{
     
 }
 
+h1 {
+    margin-left: 20px;
+}
+
 header{
     background-color: #A3EAFF;
     height: 110px;
     display: flex;
+    align-items: center;
 }
 
 article{
