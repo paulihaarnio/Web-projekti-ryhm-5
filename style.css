@@ -3,8 +3,15 @@ img{
     height: auto;
 }
 
+#logo {
+    height: 100px;
+    width: auto;
+    padding: 10px;
+}
+
 header{
     background-color: rgb(50, 170, 170);
+    height: 110px;
 }
 
 article{
