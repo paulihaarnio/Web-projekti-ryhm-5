@@ -1,3 +1,4 @@
+
 img{
     width: 700px;
     height: auto;
@@ -39,4 +40,5 @@ header img{
 
 a{
     display: block;
+    text-decoration: none black;
 }
