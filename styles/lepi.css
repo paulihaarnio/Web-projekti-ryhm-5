@@ -1,0 +1,44 @@
+img{
+    width: 700px;
+    height: auto;
+}
+
+#logo {
+    height: 100px;
+    width: auto;
+    padding: 10px;
+}
+
+header{
+    background-color: #A3EAFF;
+    height: 110px;
+    border: solid black 2px;
+
+}
+
+article{
+    background-color: #FFB8A3;
+}
+
+nav{
+    background-color: #A3EAFF;
+    min-height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    border: solid black 2px
+}
+
+footer{
+    background-color: #65DCFF;
+}
+
+header img{
+    height: 200px;
+    width: auto;
+    position: absolute;
+    right: 0%;
+}
+
+a{
+    display: block;
+}

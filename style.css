@@ -10,22 +10,24 @@ img{
 }
 
 header{
-    background-color: rgb(50, 170, 170);
+    background-color: #A3EAFF;
     height: 110px;
 }
 
 article{
-    background-color: rgb(129, 88, 168);
+    background-color: #FFB8A3
 }
 
 nav{
-    background-color: rgb(95, 117, 72);
+    background-color: #A3EAFF;
     min-height: 150px;
     width: 150px;
+    border-radius: 5px;
+    border: solid #65DCFF 3px
 }
 
 footer{
-    background-color: rgb(93, 117, 163);
+    background-color: #65DCFF;
 }
 
 header img{
