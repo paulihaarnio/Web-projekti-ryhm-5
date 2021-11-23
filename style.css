@@ -20,10 +20,12 @@ header{
     height: 110px;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 article{
-    background-color: #FFB8A3
+    background-color: #FFB8A3;
+    margin-bottom: 10px;
 }
 
 nav{
