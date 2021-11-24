@@ -3,6 +3,8 @@ main {
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5%;
+    padding:5%;
+    align-content: center;
 }
 body { background-color: aqua;}
 nav { background-color: azure;} 
