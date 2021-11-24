@@ -1,22 +1,30 @@
-body{
-    display: grid;
+#body{
+   display: grid;
 }
 
 header{
-    background-color: rgb(50, 170, 170);
+  
 }
 
-nav{
-    background-color: rgb(95, 117, 72);
-    min-height: 150px;
-    width: 150px;
-    position: sticky;
+#peli{
+    margin-right: auto;
+    margin-left: auto;
+    width: 20em;
+    height: 9em;
+    background-color: #FFB8A3;
+    border-radius: 5px;
+    padding:10px;
+    border:4px solid #FF8865 ;
+    margin-bottom: 20px;
 }
 
-footer{
-    background-color: rgb(93, 117, 163);
+#vastaus{
+    width: 3em;
+    height: 1.8em;
 }
 
-a{
-    display: block;
+#button{
+    width: auto;
+    height: 1.8em;
+    margin-left: 2em;
 }
