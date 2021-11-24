@@ -26,8 +26,12 @@ const questions = [
     
 ]
 
+let question1 = "Annalla on 50 omenaa, hän antaa niistä puolet Villelle ja vielä 10 Sannille. Kuinka monta omenaa Annalla nyt on?";
+let allAnswers = [15, 20, 25, 30];
 
-function showQuiz() {
+quiz.innerHTML = question1;
+
+/*function showQuiz() {
     const html = [];
 
     questions.forEach( (currentQuestion, questionNumber) => {
@@ -54,7 +58,7 @@ function showQuiz() {
 
 function showResult() {
 
-}
+}*/
 
 showQuiz();
 submit.addEventListener("click", showResult);
