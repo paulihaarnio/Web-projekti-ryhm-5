@@ -10,7 +10,7 @@
 
     <title>Muksuvisa</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="code.js" defer></script>
+    <script src="../js/petovisa.js" defer></script>
     <script src="https://kit.fontawesome.com/6329411041.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -18,11 +18,6 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
   <div class="container-fluid">
     <div class="row">
       <header>
@@ -32,18 +27,16 @@
       </header>
     </div>
     <div class="row">
-      <div class="col">
-      <article>
-        <h3>Tietoa sivusta</h3>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eos vero quia quam autem cum, debitis repudiandae, minus enim dolorum hic animi maiores quas? Dolore perspiciatis culpa et. Maxime, nostrum.
-      </article>
-    </div>
-      <div class="col">
-      <article>
-        <h3>Tietoa visoista</h3>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim libero ullam sequi impedit officia beatae a asperiores quos voluptatum, animi fuga expedita qui unde eius vero porro, delectus voluptatibus itaque.
-      </article>
-    </div>
+        <div class="col">
+            <h1 id="question">Kysymys</h1>
+            <img src="" alt="" id="questionImg">
+            <div id="answers">
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>
     </div>
     <nav  class="nav flex-column">
         <a  class="nav-link" href="pages/pauli.html">Pauli</a>
