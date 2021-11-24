@@ -3,13 +3,7 @@
     height: 100px;
     width: auto;
     padding: 10px;
-}
-
-#logo2 {
-    height: 100px;
-    width: auto;
-    padding: 10px;
-    position: absolute;
+    
 }
 
 h1 {
@@ -33,31 +27,24 @@ article{
 }
 
 nav{
-    display: block;
     background-color: #A3EAFF;
     min-height: 150px;
     width: 150px;
     border-radius: 5px;
     border: solid #0352fc 3px;
+    margin-bottom: 10px;
 }
 
 footer{
+    display: flex;
+    justify-content: center;
     background-color: #65DCFF;
+    height: 150px;
     border-top: solid #0352fc 4px;
-    height: 110px;
-    display: block;
-    align-items: center;
 }
+
 
 header img{
-    height: 200px;
-    width: auto;
-    position: absolute;
-    right: 0%;
-}
-
-
-footer img{
     height: 200px;
     width: auto;
     position: absolute;
