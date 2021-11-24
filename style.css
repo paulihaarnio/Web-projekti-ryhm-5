@@ -1,9 +1,4 @@
 
-img{
-    width: 700px;
-    height: auto;
-}
-
 #logo {
     height: 100px;
     width: auto;
@@ -32,16 +27,21 @@ article{
 }
 
 nav{
+    display: flex;
     background-color: #A3EAFF;
     min-height: 150px;
     width: 150px;
     border-radius: 5px;
-    border: solid #0352fc 3px
+    border: solid #0352fc 3px;
 }
 
 footer{
+    display: block;
     background-color: #65DCFF;
+    border-top: solid #0352fc 4px;
+    margin-top: 10px;
 }
+
 
 header img{
     height: 200px;
@@ -57,8 +57,4 @@ a{
 
 body{
     background-color: rgb(204, 225, 231)
-}
-
-footer{
-    border-top: solid #0352fc 4px;
 }
