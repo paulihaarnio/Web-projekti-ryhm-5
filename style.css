@@ -27,19 +27,19 @@ article{
 }
 
 nav{
+    display: flex;
     background-color: #A3EAFF;
     min-height: 150px;
     width: 150px;
     border-radius: 5px;
     border: solid #0352fc 3px;
-    margin-bottom: 10px;
 }
 
 footer{
-    display: flex;
+    display: block;
     background-color: #65DCFF;
-    height: 150px;
     border-top: solid #0352fc 4px;
+    margin-top: 10px;
 }
 
 
