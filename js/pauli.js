@@ -1,6 +1,6 @@
 
 
-document.querySelector("button").addEventListener("click", check)
+document.getElementById("button").addEventListener("click", check)
 
 function check(){
     let vastaus=Number(document.getElementById("vastaus").value)
@@ -11,3 +11,4 @@ function check(){
         document.getElementById("vastausKenttä").innerText="Väärä vastaus, yritä uudelleen."
     }
 }
+
