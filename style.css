@@ -37,6 +37,7 @@ nav{
 
 footer{
     display: flex;
+    justify-content: center;
     background-color: #65DCFF;
     height: 150px;
     border-top: solid #0352fc 4px;
