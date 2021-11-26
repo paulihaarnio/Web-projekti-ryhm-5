@@ -24,8 +24,9 @@ header{
     margin-bottom: 10px;
 }
 
-header button {
+#navButton {
     vertical-align: right;
+    justify-content: space-between;
 }
 
 article{
@@ -55,13 +56,6 @@ footer{
     align-items: center;
 }
 
-header img{
-    height: 200px;
-    width: auto;
-    position: absolute;
-    right: 0%;
-}
-
 
 footer img{
     height: 200px;
@@ -73,6 +67,7 @@ footer img{
 a{
     display: block;
     text-decoration: none black;
+    width: 54px;
 }
 
 body{
