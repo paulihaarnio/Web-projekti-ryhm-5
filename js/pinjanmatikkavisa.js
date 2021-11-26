@@ -6,6 +6,7 @@ let radioB = document.getElementById("bLabel");
 let radioC = document.getElementById("cLabel");
 let radioD = document.getElementById("dLabel");
 let radioButtons = document.getElementsByName("radioButton");
+let i = 0;
 console.log(radioButtons)
 
 let questions = [
@@ -24,16 +25,44 @@ let question5Answers = [1, 2, 3, 14];
 let allAnswers = [];
 allAnswers.push(question1Answers, question2Answers, question3Answers, question4Answers, question5Answers);
 
-let rightAnswers = [allAnswers[0][0], allAnswers[1][1], allAnswers[2][3], allAnswers[3][2], allAnswers[4][3]];
+//let rightAnswers = [allAnswers[0][0], allAnswers[1][1], allAnswers[2][3],allAnswers[3][2], allAnswers[4][3]];
+let rightAnswers = ["a", "b", "d", "c", "d"];
 
 radioA.innerHTML += allAnswers[0][0];
 radioB.innerHTML += allAnswers[0][1];
 radioC.innerHTML += allAnswers[0][2];
-radioD.innerHTML += allAnswers[0][3]
+radioD.innerHTML += allAnswers[0][3];
 quiz.innerHTML = questions[0];
 
 
-submit.addEventListener("click", function() {
-    result.innerHTML = rightAnswers[0]
+// tarkista button click funktio + radiobuttonin tarkistus
+submit.addEventListener("click", function () {
+    const rbs = document.querySelectorAll('input[name="radioButton"]');
+    let selectedValue;
+    for (const rb of rbs) {
+        if (rb.checked) {
+            selectedValue = rb.value;
+            break;
+        }
+    }
+    
+    if(rightAnswers[0] == selectedValue) {
+        result.innerHTML = "Oikein meni"
+    } else {
+        result.innerHTML = "Väärin meni"
+    }
+});
+
+
+
+//kehitä kysymysten vaihto funktio
+document.getElementById("nextQuestion").addEventListener("click", function() {
+    quiz.innerHTML = questions[i]
+    radioA.innerHTML += allAnswers[i][0];
+    radioB.innerHTML += allAnswers[i][1];
+    radioC.innerHTML += allAnswers[i][2];
+    radioD.innerHTML += allAnswers[i][3];
+    i = i + 1;
+
 })
 
