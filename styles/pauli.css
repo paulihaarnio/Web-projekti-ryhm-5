@@ -16,9 +16,15 @@ header{
     padding:10px;
     border:4px solid #FF8865 ;
     margin-bottom: 20px;
+    display: inline-block;
 }
 
 #vastaus{
+    width: 3em;
+    height: 1.8em;
+}
+
+#vastaus_minus{
     width: 3em;
     height: 1.8em;
 }
@@ -27,4 +33,23 @@ header{
     width: auto;
     height: 1.8em;
     margin-left: 2em;
+}
+
+#button_minus{
+    width: auto;
+    height: 1.8em;
+    margin-left: 2em;
+}
+
+#minuspeli{
+    margin-right: auto;
+    margin-left: auto;
+    width: 20em;
+    height: 9em;
+    background-color: #FFB8A3;
+    border-radius: 5px;
+    padding:10px;
+    border:4px solid #FF8865 ;
+    margin-bottom: 20px;
+    display: inline-block;
 }

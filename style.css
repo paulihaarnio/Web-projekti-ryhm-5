@@ -24,8 +24,9 @@ header{
     margin-bottom: 10px;
 }
 
-header button {
+#navButton {
     vertical-align: right;
+    justify-content: space-between;
 }
 
 article{
@@ -47,19 +48,22 @@ article{
     top: 110px;
 }
 
-footer{
+#offcanvas a {
+    width: 150px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
     background-color: #65DCFF;
     border-top: solid #0352fc 4px;
     height: 110px;
-    display: block;
-    align-items: center;
+    width: 100%;
+    padding-left: 1em;
 }
 
-header img{
-    height: 200px;
-    width: auto;
-    position: absolute;
-    right: 0%;
+footer p {
+    margin-top: 1em;
 }
 
 
@@ -73,6 +77,7 @@ footer img{
 a{
     display: block;
     text-decoration: none black;
+    width: 54px;
 }
 
 body{
