@@ -11,6 +11,7 @@
 
     <title>Muksuvisa</title>
     <link rel="stylesheet" href="../styles/pinja.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="../js/pinjanmatikkavisa.js" defer></script>
     <script src="https://kit.fontawesome.com/6329411041.js" crossorigin="anonymous"></script>
   </head>
@@ -31,8 +32,8 @@
                     <span class="ms-1 d-none d-sm-inline">Matematiikka</span>
                   </a>
                   <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
-                      <li><a class="dropdown-item" href="#">Matikka1</a></li>
-                      <li><a class="dropdown-item" href="#">Matikka2</a></li>
+                      <li><a class="dropdown-item" href="../pages/pauli.html">Matikka1</a></li>
+                      <li><a class="dropdown-item" href="../pages/pinjanmatikkavisa.html">Matikka2</a></li>
                   </ul>
               </li>
               <li class="nav-item">
@@ -56,17 +57,25 @@
     <div class="container-fluid">
       <div class="row">
         <header>
-          <a href="../index.html"><i class="fas fa-home fa-3x"></i></a>
-          <h1>Muksuvisa</h1>
-          <img src="../kuvat/logo.png" alt="" id="logo">
-          <!-- Navi toggleri -->
-          <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
-            <i class="bi bi-caret-down fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
-          Visat</button>
-          <button class=".text-right">Tietoa</button>
-          
+            <div class="col-1">
+              <a class="float-end" href="../index.html"><i class="fas fa-home fa-3x"></i></a>
+            </div>
+            <div class="col-md-auto">
+              <h1>Muksuvisa</h1>
+            </div>
+            <div class="col-6">
+              <img src="../kuvat/logo.png" alt="" id="logo">
+            </div>
+            <div class="col-2">
+              <!-- Navi toggleri -->
+              <button id="navButton" class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+                <i class="bi bi-caret-down fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+              Visat</button>
+            </div>
+            <div class="col-1">
+              <button class=".text-right">Tietoa</button>
+            </div>
         </header>
-        
       </div>
       
       <div class="row" id="quiz">
@@ -88,13 +97,11 @@
         <span id="nextButton"></span>
       </div>
 
-      <div class="row">
-        <footer>
-          <img src="../kuvat/logo.png" alt="" id="logo2">
-            <p>Copyright Muksuvisa corporation</p>
-            <p>Contact: CEO of Muksuvisa corporation Pauli Haarnio 0503072295</p>
-        </footer>
-      </div>
-    </div> 
+    </div>
+    <footer class="footer mt-auto">
+      <img src="../kuvat/logo.png" alt="" id="logo2">
+      <p>Copyright Muksuvisa corporation</p>
+      <p>Contact: CEO of Muksuvisa corporation Pauli Haarnio 0503072295</p>
+    </footer>
   </body>
 </html>
