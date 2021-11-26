@@ -10,6 +10,7 @@
  * printtaa kysymys
  * arvo vastausten järjestys
  */
+let printedQuestion = 0;
 
 class Question {
     question = "";
@@ -60,7 +61,7 @@ class Question {
         document.getElementById("questionImg").src = this.img;
 
         let div = document.getElementById("answers");
-        let answers = div.querySelectorAll("input");
+        let answers = div.querySelectorAll("label");
 
         for(let i=0; i<answers.length; i++) {
             answers[i].textContent = this.answers[i];
@@ -111,11 +112,17 @@ answers4[3] = "Ne helpottavat puuhun kiipeämistä";
 questions[4].setAnswers(answers4);
 
 document.querySelector("#submit").addEventListener("click", submitAnswer);
+document.querySelector("#next").addEventListener("click", nextQuestion);
 
 questions[0].printQuestion();
 
 function submitAnswer() {
     document.getElementById("result").textContent = "vastattu";
+}
+
+function nextQuestion() {
+    printedQuestion++;
+    questions[printedQuestion].printQuestion();
 }
 
 //tulos sivun printtaus
