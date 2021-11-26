@@ -48,12 +48,22 @@ article{
     top: 110px;
 }
 
-footer{
+#offcanvas a {
+    width: 150px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
     background-color: #65DCFF;
     border-top: solid #0352fc 4px;
     height: 110px;
-    display: block;
-    align-items: center;
+    width: 100%;
+    padding-left: 1em;
+}
+
+footer p {
+    margin-top: 1em;
 }
 
 
