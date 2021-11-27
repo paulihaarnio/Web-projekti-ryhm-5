@@ -6,40 +6,14 @@
  let kysymys4=document.getElementById("myText").innerHTML="Mikä on maailman pisin joki?"
  let kysymys5=document.getElementById("myText").innerHTML="Kuinka monta kaupunkia Suomessa on?"
  
- let photo1=document.getElementById("kuva").innerHTML='<img src="../kuvat/flag-g11ce8c767_1920.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
+/* let photo1=document.getElementById("kuva").innerHTML='<img src="../kuvat/flag-g11ce8c767_1920.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
 let photo2= document.getElementById("kuva").innerHTML='<img src="../kuvat/saksa.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
 let photo3= document.getElementById("kuva").innerHTML='<img src="../kuvat/vuori.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
  let photo4=document.getElementById("kuva").innerHTML='<img src="../kuvat/joki.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
  let photo5=document.getElementById("kuva").innerHTML='<img src="../kuvat/suomi.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
+*/
 
-
- function vaihto1() {
-    document.getElementById("kuva").innerHTML='<img src="../kuvat/flag-g11ce8c767_1920.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
-    document.getElementById("myText").innerHTML="Minkä maan lippu on kuvassa?"
-    document.getElementById("nappi").innerHTML='<button type="button" class="btn btn-secondary" onclick="oikeaNappi()">Primary</button>'
-    //document.getElementById("nappi2").innerHTML='<button type="button" class="btn btn-secondary" onclick="oikeaNappi()">Primary</button>'
- } 
  
- function vaihto2() {
-    document.getElementById("kuva").innerHTML='<img src="../kuvat/saksa.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
-    document.getElementById("teksti").innerHTML="Mikä on Saksan pääkaupunki?"
-    document.getElementById("nappi").innerHTML='<button type="button" class="btn btn-secondary" onclick="oikeaNappi()">Primary</button>'
- } 
- function vaihto3() {
-    document.getElementById("kuva").innerHTML='<img src="../kuvat/vuori.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
-    document.getElementById("teksti").innerHTML="Mikä on maailman korkein vuori?"
-    document.getElementById("nappi").innerHTML='<button type="button" class="btn btn-secondary" onclick="oikeaNappi()">Primary</button>'
- } 
- function vaihto4() {
-    document.getElementById("kuva").innerHTML='<img src="../kuvat/joki.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
-    document.getElementById("teksti").innerHTML="Mikä on maailman pisin joki?"
-    document.getElementById("nappi").innerHTML='<button type="button" class="btn btn-secondary" onclick="oikeaNappi()">Primary</button>'
- } 
- function vaihto5() {
-    document.getElementById("kuva").innerHTML='<img src="../kuvat/suomi.jpg" alt="Girl in a jacket"  width="637px" height="300px">'
-    document.getElementById("teksti").innerHTML="Kuinka monta kaupunkia Suomessa on?"
-    document.getElementById("nappi").innerHTML='<button type="button" class="btn btn-secondary" onclick="oikeaNappi()">Primary</button>'
- } 
  function oikeaNappi() {
     pisteet=pisteet+1;
     console.log(pisteet)
@@ -60,35 +34,66 @@ btn.addEventListener("click", changeText);
     	  return;
        }
 
-     var imgArray = new Array();
+    /*   var imgArray = new Array();
 
-     var myImage = document.getElementById("kuva");
-
-     var imageArray = ["_kuvat/vuori.jpg","_kuvat/vuori.jpg","_kuvat/vuori.jpg",
-       "_kuvat/vuori.jpg","_kuvat/vuori.jpg"];
-     
-     var imageIndex = 0; 
-     
-     function changeImage() {
-       myImage.setAttribute("src",imageArray[imageIndex]);
-       imageIndex = (imageIndex + 1) % imageArray.length;
-     }
-     
-     setInterval(changeImage, 5000);
-
- /*var photos = [photo1, photo2, photo3, photo4, photo5]
- var photo=document.getElementById("kuva");
- btn = document.getElementById("myBtn");
- btn.addEventListener("click", changeTexts);
- photo.innerHTML = photos[0];
-
-
-    function changeTexts(){
-       var searchTerm =  photo.innerHTML  ;
-       var index=photos.indexOf(searchTerm)+1;
-       if(index == photos.length )index=0;
-          var results=photos[index];
-          photo.innerHTML = results;
-    	  return;
+       imgArray[0] = new Image();
+       imgArray[0].src = '../kuvat/joki.jpg';
+       
+       imgArray[1] = new Image();
+       imgArray[1].src = '../kuvat/vuori.jpg';
+       
+        ... more images ... 
+       
+       imgArray[5] = new Image();
+       imgArray[5].src = 'images/img/Splash_image6.jpg';
+       
+       /*------------------------------------*/
+      
+     /*  function nextImage(element)
+       
+       {
+           var img = document.getElementById(element);
+       
+           for(var i = 0; i < imgArray.length;i++)
+           {
+               if(imgArray[i].src == img.src) // << check this
+               {
+                   if(i === imgArray.length){
+                       document.getElementById(element).src = imgArray[0].src;
+                       break;
+                   }
+                   document.getElementById(element).src = imgArray[i+1].src;
+                   break;
+               }
+           }
+       }*/
+ 
+       
+       var slideIndex = 1;
+       showSlides(slideIndex);
+       
+       // Next/previous controls
+       function plusSlides(n) {
+         showSlides(slideIndex += n);
        }
-       */
+       
+       // Thumbnail image controls
+       function currentSlide(n) {
+         showSlides(slideIndex = n);
+       }
+       
+       function showSlides(n) {
+         var i;
+         var slides = document.getElementsByClassName("mySlides");
+         var dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+         }
+         for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+       }

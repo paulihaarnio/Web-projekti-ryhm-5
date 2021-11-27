@@ -45,22 +45,22 @@ function check(){
     if(counter==5){
         document.getElementById("peli").innerHTML="Peli päättyi, sait "+counter2+"/5 tehtävää oikein."+"<br>"
         if(counter2==0){
-            document.getElementById("peli").innerText+= "Häpeä!"
+            document.getElementById("peli").innerHTML+= "Häpeä!"+'<i class="far fa-sad-cry fa-3x"></i>'+'<i class="far fa-thumbs-down fa-3x"></i>'
         }
         if(counter2==1){
-            document.getElementById("peli").innerText+= "Harjoittele lisää!"
+            document.getElementById("peli").innerHTML+= "Harjoittele lisää!"+'<i class="far fa-angry fa-3x"></i>'
         }
         if(counter2==2){
-            document.getElementById("peli").innerText+= "Ihan ok"
+            document.getElementById("peli").innerHTML+= "Ihan ok"+'<i class="fas fa-meh fa-5x"></i>'
         }
         if(counter2==3){
-            document.getElementById("peli").innerText+= "Hyvä suoritus"
+            document.getElementById("peli").innerHTML+= "Hyvä suoritus"+'<i class="far fa-smile fa-5x"></i>'
         }
         if(counter2==4){
-            document.getElementById("peli").innerText+= "Melkein kaikki oikein!"
+            document.getElementById("peli").innerHTML+= "Melkein kaikki oikein!"+'<i class="far fa-grin fa-5x"></i>'
         }
         if(counter2==5){
-            document.getElementById("peli").innerText+= "Kaikki oikein! Hienoa"
+            document.getElementById("peli").innerHTML+= "Kaikki oikein! Hienoa"+'<i class="far fa-laugh-beam fa-5x"></i>'+'<i class="far fa-thumbs-up fa-3x"></i>'
         }
         
     }
