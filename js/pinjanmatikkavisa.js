@@ -1,42 +1,33 @@
-let quiz = document.getElementById("quiz");
+let quiz = document.getElementById("question");
 let result = document.getElementById("result");
-let submit = document.getElementById("submit");
-let radioA = document.getElementById("aLabel");
-let radioB = document.getElementById("bLabel");
-let radioC = document.getElementById("cLabel");
-let radioD = document.getElementById("dLabel");
+let aAnswer = document.getElementById("aAns");
+let bAnswer = document.getElementById("bAns");
+let cAnswer = document.getElementById("cAns");
+let dAnswer = document.getElementById("dAns");
 let radioButtons = document.getElementsByName("radioButton");
-let i = 0;
-console.log(radioButtons)
+let i = 1;
 
 let questions = [
-    "Annalla on 50 omenaa, hän antaa niistä puolet Villelle ja vielä 10 Sannille. Kuinka monta omenaa Annalla nyt on?", 
-    "Äiti on ostanut lapsille karkkipussin. Pussissa on yhteensä 120 karkkia. Kuinka monta karkkia kukin neljästä (4) lapsesta saa, jos karkit jaetaan tasan?",
-    "Urheilukentän juoksuradan pituus on 400 metriä, kuinka pitkän matkan olet juossut jos kierrät radan 6 kertaa?", 
-    "Enni ostaa kaupasta lelun, joka maksaa 9 euroa, jäätelön, joka maksaa 2,50 euroa sekä tikkarin, joka maksaa 0,40 euroa. Kuinka paljon Ennin ostokset maksavat yhteensä?", 
-    "Lotalla on lemmikkinä koira, kissa, hamsteri, käärme ja papukaija. Kuinka monta jalkaa lemmikeillä on yhteensä?"
+    "1. Annalla on 50 omenaa, hän antaa niistä puolet Villelle ja vielä 10 Sannille. <br> Kuinka monta omenaa Annalla nyt on?", 
+    "2. Äiti on ostanut lapsille karkkipussin. Pussissa on yhteensä 120 karkkia. <br> Kuinka monta karkkia kukin neljästä (4) lapsesta saa, jos karkit jaetaan tasan?",
+    "3. Urheilukentän juoksuradan pituus on 400 metriä, kuinka pitkän matkan olet juossut, jos kierrät radan 6 kertaa?", 
+    "4. Enni ostaa kaupasta lelun, joka maksaa 9 euroa, jäätelön, joka maksaa 2,50 euroa sekä tikkarin, joka maksaa 0,40 euroa. Kuinka paljon Ennin ostokset maksavat yhteensä?", 
+    "5. Lotalla on lemmikkinä koira, kissa, hamsteri, käärme ja papukaija. <br> Kuinka monta jalkaa lemmikeillä on yhteensä?"
 ];
 
+let allAnswers = [];
 let question1Answers = [15, 20, 25, 30];
 let question2Answers = [20, 30, 35, 40];
 let question3Answers = [1, 2, 3, 2400];
 let question4Answers = [1, 2, 11.90, 4];
 let question5Answers = [1, 2, 3, 14];
-let allAnswers = [];
 allAnswers.push(question1Answers, question2Answers, question3Answers, question4Answers, question5Answers);
 
-//let rightAnswers = [allAnswers[0][0], allAnswers[1][1], allAnswers[2][3],allAnswers[3][2], allAnswers[4][3]];
 let rightAnswers = ["a", "b", "d", "c", "d"];
 
-radioA.innerHTML += allAnswers[0][0];
-radioB.innerHTML += allAnswers[0][1];
-radioC.innerHTML += allAnswers[0][2];
-radioD.innerHTML += allAnswers[0][3];
-quiz.innerHTML = questions[0];
 
-
-// tarkista button click funktio + radiobuttonin tarkistus
-submit.addEventListener("click", function () {
+// tehtävän tarkistus "tarkista"-nappia painettaessa
+document.getElementById("submit").addEventListener("click", function () {
     const rbs = document.querySelectorAll('input[name="radioButton"]');
     let selectedValue;
     for (const rb of rbs) {
@@ -46,23 +37,46 @@ submit.addEventListener("click", function () {
         }
     }
     
-    if(rightAnswers[0] == selectedValue) {
+    if(rightAnswers[i - 1] == selectedValue) {
         result.innerHTML = "Oikein meni"
     } else {
         result.innerHTML = "Väärin meni"
     }
 });
 
-
-
-//kehitä kysymysten vaihto funktio
+//seuraava kysymys
 document.getElementById("nextQuestion").addEventListener("click", function() {
-    quiz.innerHTML = questions[i]
-    radioA.innerHTML += allAnswers[i][0];
-    radioB.innerHTML += allAnswers[i][1];
-    radioC.innerHTML += allAnswers[i][2];
-    radioD.innerHTML += allAnswers[i][3];
-    i = i + 1;
-
+    if(i < 5) {
+        aAnswer.innerHTML = "";
+        bAnswer.innerHTML = "";
+        cAnswer.innerHTML = "";
+        dAnswer.innerHTML = "";
+        quiz.innerHTML = questions[i]
+        aAnswer.innerHTML += allAnswers[i][0];
+        bAnswer.innerHTML += allAnswers[i][1];
+        cAnswer.innerHTML += allAnswers[i][2];
+        dAnswer.innerHTML += allAnswers[i][3];
+        i = i + 1;
+        
+        console.log(i);
+    } else {
+        document.getElementById("quizContainer").style.display = "none";
+        document.getElementById("allDone").innerHTML = "Hienoa kaikki tehtävät tehty!";
+        document.getElementById("start").innerHTML = "Kokeile uudestaan"
+        document.getElementById("start").style.display = "block";
+        
+    }
 })
 
+//visan aloitusnappi, ensimmäinen tehtävä tulee esiin kun nappia painaa
+document.getElementById("start").onclick = function() {
+    i = 1;
+    document.getElementById("allDone").innerHTML = "";
+    document.getElementById("quizContainer").style.display = "block";
+    document.getElementById("start").style.display = "none";
+    quiz.innerHTML = questions[0];
+    aAnswer.innerHTML += allAnswers[0][0];
+    bAnswer.innerHTML += allAnswers[0][1];
+    cAnswer.innerHTML += allAnswers[0][2];
+    dAnswer.innerHTML += allAnswers[0][3];
+}
