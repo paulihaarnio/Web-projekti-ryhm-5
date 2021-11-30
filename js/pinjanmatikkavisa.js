@@ -29,7 +29,9 @@ allAnswers.push(question1Answers, question2Answers, question3Answers, question4A
 let rightAnswers = ["a", "b", "d", "c", "d"];
 
 
-// tehtävän tarkistus "tarkista"-nappia painettaessa
+/* tehtävän tarkistus "tarkista"-nappia painettaessa. Muutujaan
+ answered asetetaan arvo true kun nappia on painettu */
+//KORJAA TÄMÄ KOHTA NIIN ETTEI VASTAUSTA VOI VAIHTAA ENÄÄ TARKISTUKSEN JÄLKEEN
 document.getElementById("submit").addEventListener("click", function () {
     const rbs = document.querySelectorAll('input[name="radioButton"]');
     let selectedValue;
@@ -52,11 +54,12 @@ document.getElementById("submit").addEventListener("click", function () {
 
     answered = true;
     document.getElementById("correct").innerHTML = correctAnswers;
-    console.log(answered);
+    
 });
 
 
-//seuraava kysymys
+/*seuraava kysymys painike. Painiketta pystyy painamaan vasta kun 
+tehtävä on ensin tarkistettu */
 document.getElementById("nextQuestion").addEventListener("click", function() {
    let radios = document.getElementsByName("radioButton");
    for(let i = 0; i < radios.length; i++) {
@@ -88,7 +91,7 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
     answered = false;
 })
 
-//visan aloitusnappi, ensimmäinen tehtävä tulee esiin kun nappia painaa
+//visan aloituspainike, ensimmäinen tehtävä tulee esiin kun nappia painaa
 document.getElementById("start").onclick = function() {
     i = 1;
     document.getElementById("allDone").innerHTML = "";
