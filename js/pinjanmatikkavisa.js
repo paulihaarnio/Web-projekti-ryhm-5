@@ -6,6 +6,9 @@ let cAnswer = document.getElementById("cAns");
 let dAnswer = document.getElementById("dAns");
 let radioButtons = document.getElementsByName("radioButton");
 let i = 1;
+let correctAnswers = 0;
+let answered = false;
+
 
 let questions = [
     "1. Annalla on 50 omenaa, hän antaa niistä puolet Villelle ja vielä 10 Sannille. <br> Kuinka monta omenaa Annalla nyt on?", 
@@ -38,14 +41,28 @@ document.getElementById("submit").addEventListener("click", function () {
     }
     
     if(rightAnswers[i - 1] == selectedValue) {
-        result.innerHTML = "Oikein meni"
+        result.innerHTML = "Oikein meni";
+        correctAnswers++;
+        answered = true;
     } else {
         result.innerHTML = "Väärin meni"
+        answered = true;
     }
+
+    document.getElementById("correct").innerHTML = correctAnswers;
+    console.log(answered);
 });
+
 
 //seuraava kysymys
 document.getElementById("nextQuestion").addEventListener("click", function() {
+   let radios = document.getElementsByName("radioButton");
+   for(let i = 0; i < radios.length; i++) {
+       if(radios[i].checked) {
+           radios[i].checked = false;
+       }
+   }
+
     if(i < 5) {
         aAnswer.innerHTML = "";
         bAnswer.innerHTML = "";
