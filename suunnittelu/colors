@@ -1,14 +1,16 @@
 Päävärit
 Sininen: #A3EAFF
-Punainen: #FFB8A3
+Punainen: #FFA3EA
+
+(optional keltainen) #EAFFA3
 
 Hovervärit(tummemmat)
 Sininen: #65DCFF
-Punainen: #FF8865
+Punainen: #805275
 
 Vielä tummemmat
 Sininen: #0352fc
-Punainen: #fc0314
+Punainen: #40293A
 
 Oikein, väärin ja ei vastattu
 Vihreä: #86FA6A

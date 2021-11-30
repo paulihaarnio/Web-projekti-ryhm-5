@@ -17,6 +17,9 @@
   </header>
 </div>
 <body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
   <div class="container-fluid">
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
@@ -28,10 +31,50 @@
       <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="navigaatio" >&#9776; open</span>
 <main>
 
-  <div class="p-2"><button type="button" class="btn btn-primary" id="myBtn">Primary</button></div>
+  <div class="p-2"><button type="button" class="btn btn-primary" id="myBtn" onclick="plusSlides(1)">Seuraava Kysymys</button></div>
 
-<span id="kuva"><img src="../kuvat/muksu.jpg"  width="637px" height="300px"></span><br>
-<span id="myText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sunt accusantium maiores ducimus voluptatibus a quae voluptatem minus, fugit deserunt voluptas dolore dolores voluptate corrupti repellat placeat? Perspiciatis, quae provident.
+ <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+
+    <img src="../kuvat/flag-g11ce8c767_1920.jpg" style="width:100%">
+    <div class="text">Kysymys 1/5</div>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img src="../kuvat/saksa.jpg" style="width:100%">
+    <div class="text">Kysymys 2/5</div>
+  </div>
+
+  <div class="mySlides fade">
+  
+    <img src="../kuvat/vuori.jpg" style="width:100%">
+    <div class="text">Kysymys 3/5</div>
+  </div>
+
+  <div class="mySlides fade">
+   
+    <img src="../kuvat/joki.jpg" style="width:100%">
+    <div class="text">Kysymys 4/5</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="../kuvat/suomi.jpg" style="width:100%">
+    <div class="text">Kysymys 5/5</div>
+  </div>
+
+
+</div>
+
+<br>
+
+
+
+<span id="myText" style="font-size: 30px; " class="d-flex justify-content-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sunt accusantium maiores ducimus voluptatibus a quae voluptatem minus, fugit deserunt voluptas dolore dolores voluptate corrupti repellat placeat? Perspiciatis, quae provident.
 Iure dignissimos excepturi molestiae repellat? Deserunt molestiae officiis vero recusandae, distinctio ab in enim rem modi fugit optio quod eaque adipisci. Dicta explicabo omnis, in ipsam labore corporis laborum esse.
 Est illum soluta perferendis eos quas odio dicta eum qui quasi, blanditiis, eligendi officia exercitationem id natus laboriosam magnam. Nihil deserunt, totam eum accusantium enim blanditiis quo eligendi reprehenderit aperiam?
 </span>
@@ -64,7 +107,9 @@ Est illum soluta perferendis eos quas odio dicta eum qui quasi, blanditiis, elig
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
     }
+    
     </script>
     <script src="../js/Riku.js"></script>
+    
 </body>
 </html>
