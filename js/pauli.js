@@ -44,25 +44,26 @@ function check(){
     }
     if(counter==5){
         
+        let peli=document.getElementById("peli")
         let uudelleen='<input type="button" value="Yritä uudelleen" onClick="refresh()" id=""refresh></input>'
-        document.getElementById("peli").innerHTML="Peli päättyi, sait "+counter2+"/5 tehtävää oikein."+"<br>"
+        peli.innerHTML="Peli päättyi, sait "+counter2+"/5 tehtävää oikein."+"<br>"
         if(counter2==0){
-            document.getElementById("peli").innerHTML+= "Häpeä!"+"😭"+uudelleen
+            peli.innerHTML+= "Häpeä!"+"😭"+uudelleen
         }
         if(counter2==1){
-            document.getElementById("peli").innerHTML+= "Harjoittele lisää!"+'🥵'+uudelleen
+            peli.innerHTML+= "Harjoittele lisää!"+'🥵'+uudelleen
         }
         if(counter2==2){
-            document.getElementById("peli").innerHTML+= "Ihan ok"+'😐'+uudelleen
+            peli.innerHTML+= "Ihan ok"+'😐'+uudelleen
         }
         if(counter2==3){
-            document.getElementById("peli").innerHTML+= "Hyvä suoritus"+'🙂'+uudelleen
+            peli.innerHTML+= "Hyvä suoritus"+'🙂'+uudelleen
         }
         if(counter2==4){
-            document.getElementById("peli").innerHTML+= "Melkein kaikki oikein!"+'😀'+uudelleen
+            peli.innerHTML+= "Melkein kaikki oikein!"+'😀'+uudelleen
         }
         if(counter2==5){
-            document.getElementById("peli").innerHTML+= "Kaikki oikein! Hienoa"+"🤩👍"+uudelleen
+            peli.innerHTML+= "Kaikki oikein! Hienoa"+"🤩👍"+uudelleen
         }
         
     }

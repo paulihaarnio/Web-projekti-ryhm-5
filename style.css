@@ -83,3 +83,7 @@ a{
 body{
     background-color: rgb(204, 225, 231)
 }
+
+#welcome{
+    text-align: center;
+}
