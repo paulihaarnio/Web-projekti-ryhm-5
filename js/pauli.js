@@ -48,7 +48,7 @@ function check(){
             document.getElementById("peli").innerHTML+= "Häpeä!"+'<i class="far fa-sad-cry fa-3x"></i>'+'<i class="far fa-thumbs-down fa-3x"></i>'
         }
         if(counter2==1){
-            document.getElementById("peli").innerHTML+= "Harjoittele lisää!"+'<i class="far fa-angry fa-3x"></i>'
+            document.getElementById("peli").innerHTML+= "Harjoittele lisää!"+'🥵'
         }
         if(counter2==2){
             document.getElementById("peli").innerHTML+= "Ihan ok"+'<i class="fas fa-meh fa-5x"></i>'
