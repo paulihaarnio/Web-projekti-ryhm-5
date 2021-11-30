@@ -43,12 +43,14 @@ document.getElementById("submit").addEventListener("click", function () {
     if(rightAnswers[i - 1] == selectedValue) {
         result.innerHTML = "Oikein meni";
         correctAnswers++;
-        answered = true;
+        
+        
     } else {
         result.innerHTML = "Väärin meni"
-        answered = true;
+        
     }
 
+    answered = true;
     document.getElementById("correct").innerHTML = correctAnswers;
     console.log(answered);
 });
@@ -63,7 +65,7 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
        }
    }
 
-    if(i < 5) {
+    if(i < 5 && answered == true) {
         aAnswer.innerHTML = "";
         bAnswer.innerHTML = "";
         cAnswer.innerHTML = "";
@@ -76,13 +78,14 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
         i = i + 1;
         
         console.log(i);
-    } else {
+    } else if(i == 5 && answered == true) {
         document.getElementById("quizContainer").style.display = "none";
         document.getElementById("allDone").innerHTML = "Hienoa kaikki tehtävät tehty!";
         document.getElementById("start").innerHTML = "Kokeile uudestaan"
         document.getElementById("start").style.display = "block";
         
     }
+    answered = false;
 })
 
 //visan aloitusnappi, ensimmäinen tehtävä tulee esiin kun nappia painaa
