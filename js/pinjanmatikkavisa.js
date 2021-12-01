@@ -6,6 +6,9 @@ let cAnswer = document.getElementById("cAns");
 let dAnswer = document.getElementById("dAns");
 let radioButtons = document.getElementsByName("radioButton");
 let i = 1;
+let correctAnswers = 0;
+let answered = false;
+
 
 let questions = [
     "1. Annalla on 50 omenaa, hän antaa niistä puolet Villelle ja vielä 10 Sannille. <br> Kuinka monta omenaa Annalla nyt on?", 
@@ -26,7 +29,9 @@ allAnswers.push(question1Answers, question2Answers, question3Answers, question4A
 let rightAnswers = ["a", "b", "d", "c", "d"];
 
 
-// tehtävän tarkistus "tarkista"-nappia painettaessa
+/* tehtävän tarkistus "tarkista"-nappia painettaessa. Muutujaan
+ answered asetetaan arvo true kun nappia on painettu */
+//KORJAA TÄMÄ KOHTA NIIN ETTEI VASTAUSTA VOI VAIHTAA ENÄÄ TARKISTUKSEN JÄLKEEN
 document.getElementById("submit").addEventListener("click", function () {
     const rbs = document.querySelectorAll('input[name="radioButton"]');
     let selectedValue;
@@ -38,15 +43,32 @@ document.getElementById("submit").addEventListener("click", function () {
     }
     
     if(rightAnswers[i - 1] == selectedValue) {
-        result.innerHTML = "Oikein meni"
+        result.innerHTML = "Oikein meni";
+        correctAnswers++;
+        
+        
     } else {
         result.innerHTML = "Väärin meni"
+        
     }
+
+    answered = true;
+    document.getElementById("correct").innerHTML = correctAnswers;
+    
 });
 
-//seuraava kysymys
+
+/*seuraava kysymys painike. Painiketta pystyy painamaan vasta kun 
+tehtävä on ensin tarkistettu */
 document.getElementById("nextQuestion").addEventListener("click", function() {
-    if(i < 5) {
+   let radios = document.getElementsByName("radioButton");
+   for(let i = 0; i < radios.length; i++) {
+       if(radios[i].checked) {
+           radios[i].checked = false;
+       }
+   }
+
+    if(i < 5 && answered == true) {
         aAnswer.innerHTML = "";
         bAnswer.innerHTML = "";
         cAnswer.innerHTML = "";
@@ -59,16 +81,17 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
         i = i + 1;
         
         console.log(i);
-    } else {
+    } else if(i == 5 && answered == true) {
         document.getElementById("quizContainer").style.display = "none";
         document.getElementById("allDone").innerHTML = "Hienoa kaikki tehtävät tehty!";
         document.getElementById("start").innerHTML = "Kokeile uudestaan"
         document.getElementById("start").style.display = "block";
         
     }
+    answered = false;
 })
 
-//visan aloitusnappi, ensimmäinen tehtävä tulee esiin kun nappia painaa
+//visan aloituspainike, ensimmäinen tehtävä tulee esiin kun nappia painaa
 document.getElementById("start").onclick = function() {
     i = 1;
     document.getElementById("allDone").innerHTML = "";

@@ -30,37 +30,40 @@ function check(){
     document.getElementById("two").innerHTML=Number(Math.floor(Math.random() * 17) + 1);
     document.getElementById("vastaus").value=""
     if(vastaus==summa){
-        document.getElementById("vastausKenttä").innerText="Oikea vastaus, hienoa!"
+        document.getElementById("vastausKenttä").innerText="Oikea vastaus, hienoa!"+"✅"
         
         counter=counter+1
         counter2=counter2+1
         document.getElementById("tasksDone").innerText=counter
     }
     else{
-        document.getElementById("vastausKenttä").innerText="Väärin, oikea vastaus on "+summa+"."
+        document.getElementById("vastausKenttä").innerText="Väärin"+"❌"+", oikea vastaus on "+summa+"."
        
         counter=counter+1
         document.getElementById("tasksDone").innerText=counter
     }
     if(counter==5){
-        document.getElementById("peli").innerHTML="Peli päättyi, sait "+counter2+"/5 tehtävää oikein."+"<br>"
+        
+        let peli=document.getElementById("peli")
+        let uudelleen='<input type="button" value="Yritä uudelleen" onClick="refresh()" id=""refresh></input>'
+        peli.innerHTML="Peli päättyi, sait "+counter2+"/5 tehtävää oikein."+"<br>"
         if(counter2==0){
-            document.getElementById("peli").innerHTML+= "Häpeä!"+'<i class="far fa-sad-cry fa-3x"></i>'+'<i class="far fa-thumbs-down fa-3x"></i>'
+            peli.innerHTML+= "Häpeä!"+"😭"+uudelleen
         }
         if(counter2==1){
-            document.getElementById("peli").innerHTML+= "Harjoittele lisää!"+'<i class="far fa-angry fa-3x"></i>'
+            peli.innerHTML+= "Harjoittele lisää!"+'🥵'+uudelleen
         }
         if(counter2==2){
-            document.getElementById("peli").innerHTML+= "Ihan ok"+'<i class="fas fa-meh fa-5x"></i>'
+            peli.innerHTML+= "Ihan ok"+'😐'+uudelleen
         }
         if(counter2==3){
-            document.getElementById("peli").innerHTML+= "Hyvä suoritus"+'<i class="far fa-smile fa-5x"></i>'
+            peli.innerHTML+= "Hyvä suoritus"+'🙂'+uudelleen
         }
         if(counter2==4){
-            document.getElementById("peli").innerHTML+= "Melkein kaikki oikein!"+'<i class="far fa-grin fa-5x"></i>'
+            peli.innerHTML+= "Melkein kaikki oikein!"+'😀'+uudelleen
         }
         if(counter2==5){
-            document.getElementById("peli").innerHTML+= "Kaikki oikein! Hienoa"+'<i class="far fa-laugh-beam fa-5x"></i>'+'<i class="far fa-thumbs-up fa-3x"></i>'
+            peli.innerHTML+= "Kaikki oikein! Hienoa"+"🤩👍"+uudelleen
         }
         
     }
@@ -72,3 +75,8 @@ function check(){
 
 
 document.getElementById("button").addEventListener("click", check)
+
+function refresh(){
+   location.reload()
+}
+
