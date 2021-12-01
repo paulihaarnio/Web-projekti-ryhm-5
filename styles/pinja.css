@@ -1,11 +1,48 @@
-.radios {
-    display: block;
-    padding-bottom: 5px;
+body {
+    height: 100%;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #65DCFF;
+    border-top: solid #0352fc 4px;
+    height: 110px;
+    width: 100%;
+    padding-left: 1em;
+}
+
+#container-fluid {
+    min-height: 100vh;
+    position: relative;
+}
+#quizContainer {
+    background-color: #FFB8A3;
+    border: 2px solid #fc0314;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 20px;
+    margin: 10px;
+}
+
+#question, p {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+label {
+    display: block;
+    padding-bottom: 10px;
+    margin-left: 5px;
+}
 
 
 .button {
     display: block;
-    
+    margin: 5px;
+    border-radius: 5px;
+}
+
+span {
+    display: inline-block;
 }
