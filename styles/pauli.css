@@ -1,6 +1,3 @@
-#body{
-   display: grid;
-}
 
 
 #peli{
@@ -22,16 +19,11 @@
 }
 
 
-
 button{
     border: 1px solid ;
     border-radius: 3px;
     width: auto;
     height: 1.8em;
-}
-
-😭{
-font-size: 3em;
 }
 
 
