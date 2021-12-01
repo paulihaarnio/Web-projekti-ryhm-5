@@ -46,7 +46,9 @@ function check(){
         
         let peli=document.getElementById("peli")
         let uudelleen='<input type="button" value="Yritä uudelleen" onClick="refresh()" id=""refresh></input>'
+
         peli.innerHTML="Peli päättyi, sait "+counter2+"/5 tehtävää oikein."+"<br>"
+        
         if(counter2==0){
             peli.innerHTML+= "Häpeä!"+"😭"+uudelleen
         }
