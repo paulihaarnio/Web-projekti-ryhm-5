@@ -5,43 +5,44 @@
  let kysymys3=document.getElementById("myText").innerHTML="Mikä on maailman korkein vuori?";
  let kysymys4=document.getElementById("myText").innerHTML="Mikä on maailman pisin joki?";
  let kysymys5=document.getElementById("myText").innerHTML="Kuinka monta kaupunkia Suomessa on?";
- 
+ let loppuRuutu=document.getElementById("myText").innerHTML="Peli päättyi. Sait oikein";
+ //tähän tulee vikaruutu
 //kysymys 1
  let normiNappi1='<button type="button" class="btn btn-secondary" onclick="ei()">Ruotsi</button>';
  let normiNappi2='<button type="button" class="btn btn-secondary" onclick="ei()">Norja</button>';
  let normiNappi3='<button type="button" class="btn btn-secondary" onclick="ei()">Suomi</button>';
- let oikeeNappi1='<button type="button" class="btn btn-primary" onclick="jooo()">Tanska</button>';
+ let oikeeNappi1='<button type="button" class="btn btn-secondary" onclick="jooo()">Tanska</button>';
 
  
  //kysymys 2 
  let normiNappi5='<button type="button" class="btn btn-secondary" onclick="ei()">Lyypekki</button>'
  let normiNappi6='<button type="button" class="btn btn-secondary" onclick="ei()">Frankfurt</button>'
  let normiNappi7='<button type="button" class="btn btn-secondary" onclick="ei()">Bremen</button>'
- let oikeeNappi2='<button type="button" class="btn btn-primary" onclick="jooo()">Berliini</button>'
+ let oikeeNappi2='<button type="button" class="btn btn-secondary" onclick="jooo()">Berliini</button>'
 
  //kysymys 3
  let normiNappi9='<button type="button" class="btn btn-secondary" onclick="ei()">Kilimanjaro</button>'
  let normiNappi10='<button type="button" class="btn btn-secondary" onclick="ei()">Mount McKinley</button>'
  let normiNappi11='<button type="button" class="btn btn-secondary" onclick="ei()">Vinson Massif</button>'
- let oikeeNappi3='<button type="button" class="btn btn-primary" onclick="jooo()">Mount Everest</button>'
+ let oikeeNappi3='<button type="button" class="btn btn-secondary" onclick="jooo()">Mount Everest</button>'
 
  //kysymys 4
  let normiNappi13='<button type="button" class="btn btn-secondary" onclick="ei()">Seine</button>'
  let normiNappi14='<button type="button" class="btn btn-secondary" onclick="ei()">Thames</button>'
  let normiNappi15='<button type="button" class="btn btn-secondary" onclick="ei()">Niili</button>'
- let oikeeNappi4='<button type="button" class="btn btn-primary" onclick="jooo()">Amazon</button>'
+ let oikeeNappi4='<button type="button" class="btn btn-secondary" onclick="jooo()">Amazon</button>'
 
  //kysymys 5
  let normiNappi17='<button type="button" class="btn btn-secondary" onclick="ei()">15</button>'
  let normiNappi18='<button type="button" class="btn btn-secondary" onclick="ei()">125</button>'
  let normiNappi19='<button type="button" class="btn btn-secondary" onclick="ei()">56</button>'
- let oikeeNappi5='<button type="button" class="btn btn-primary" onclick="jooo()" >107</button>'
+ let oikeeNappi5='<button type="button" class="btn btn-secondary" onclick="jooo()" >107</button>'
 
 toiminto=true;
  function jooo() {
    
    
-   document.getElementById("tekstia").innerHTML="Oikein meni!";
+   document.getElementById("tekstia").innerHTML="Oikein meni!" + "<br>" + "Siirry seuraavaan kysymykseen.";
    if (toiminto===true ){
     pisteet=pisteet + 1;
     console.log(pisteet)
@@ -56,7 +57,7 @@ toiminto=true;
  function ei() {
   pisteet=pisteet
   console.log(pisteet)
-  document.getElementById("tekstia").innerHTML="Väärin meni!" + "<br>" + "Siirry seuraavaan kysymykseen";
+  document.getElementById("tekstia").innerHTML="Väärin meni!" + "<br>" + "Siirry seuraavaan kysymykseen.";
   toiminto=false;
   return
 }
