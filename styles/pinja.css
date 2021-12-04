@@ -12,10 +12,6 @@ footer {
     padding-left: 1em;
 }
 
-#container-fluid {
-    min-height: 100vh;
-    position: relative;
-}
 #quizContainer {
     background-color: #FFB8A3;
     border: 2px solid #fc0314;
