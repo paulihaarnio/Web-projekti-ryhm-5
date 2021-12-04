@@ -4,7 +4,8 @@ let aAnswer = document.getElementById("aAns");
 let bAnswer = document.getElementById("bAns");
 let cAnswer = document.getElementById("cAns");
 let dAnswer = document.getElementById("dAns");
-let radioButtons = document.getElementsByName("radioButton");
+let radios = document.getElementsByName("radioButton");
+let submitButton = document.querySelector("#submit")
 let i = 1;
 let correctAnswers = 0;
 let answered = false;
@@ -21,17 +22,17 @@ let questions = [
 let allAnswers = [];
 let question1Answers = [15, 20, 25, 30];
 let question2Answers = [20, 30, 35, 40];
-let question3Answers = [1, 2, 3, 2400];
-let question4Answers = [1, 2, 11.90, 4];
-let question5Answers = [1, 2, 3, 14];
+let question3Answers = ["2400 metriä", "2600 metriä", "2800 metriä", "3200 metriä"];
+let question4Answers = ["11,50€", "11,70€", "11,90€", "12,00€"];
+let question5Answers = [12, 13, 14, 16];
 allAnswers.push(question1Answers, question2Answers, question3Answers, question4Answers, question5Answers);
 
-let rightAnswers = ["a", "b", "d", "c", "d"];
+let rightAnswers = ["a", "b", "a", "c", "c"];
 
 
-/* tehtävän tarkistus "tarkista"-nappia painettaessa. Muutujaan
+/* tehtävän tarkistus "tarkista"-nappia painettaessa. Muuttujaan
  answered asetetaan arvo true kun nappia on painettu */
-//KORJAA TÄMÄ KOHTA NIIN ETTEI VASTAUSTA VOI VAIHTAA ENÄÄ TARKISTUKSEN JÄLKEEN
+
 document.getElementById("submit").addEventListener("click", function () {
     const rbs = document.querySelectorAll('input[name="radioButton"]');
     let selectedValue;
@@ -54,6 +55,11 @@ document.getElementById("submit").addEventListener("click", function () {
 
     answered = true;
     document.getElementById("correct").innerHTML = correctAnswers;
+
+    if(answered) {
+        submitButton.disabled = true;
+    }
+    
     
 });
 
@@ -61,7 +67,9 @@ document.getElementById("submit").addEventListener("click", function () {
 /*seuraava kysymys painike. Painiketta pystyy painamaan vasta kun 
 tehtävä on ensin tarkistettu */
 document.getElementById("nextQuestion").addEventListener("click", function() {
-   let radios = document.getElementsByName("radioButton");
+   
+    submitButton.disabled = false;
+
    for(let i = 0; i < radios.length; i++) {
        if(radios[i].checked) {
            radios[i].checked = false;
@@ -91,15 +99,19 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
     answered = false;
 })
 
-//visan aloituspainike, ensimmäinen tehtävä tulee esiin kun nappia painaa
+//visan aloituspainike, ensimmäinen tehtävä tulee esiin kun nappia painaa. Vaihtuu kokeile uudestaan painikkeeksi visan päätteeksi
 document.getElementById("start").onclick = function() {
+    document.getElementById("allQuestions").innerHTML = 5;
+    correctAnswers = 0;
     i = 1;
     document.getElementById("allDone").innerHTML = "";
     document.getElementById("quizContainer").style.display = "block";
     document.getElementById("start").style.display = "none";
     quiz.innerHTML = questions[0];
-    aAnswer.innerHTML += allAnswers[0][0];
-    bAnswer.innerHTML += allAnswers[0][1];
-    cAnswer.innerHTML += allAnswers[0][2];
-    dAnswer.innerHTML += allAnswers[0][3];
+    aAnswer.innerHTML = allAnswers[0][0];
+    bAnswer.innerHTML = allAnswers[0][1];
+    cAnswer.innerHTML = allAnswers[0][2];
+    dAnswer.innerHTML = allAnswers[0][3];
+
+    document.getElementById("correct").innerHTML = 0;
 }
