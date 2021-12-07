@@ -92,10 +92,14 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
         dAnswer.innerHTML += allAnswers[i][3];
         i = i + 1;
         
-        console.log(i);
     } else if(i == 5 && answered == true) {
         document.getElementById("quizContainer").style.display = "none";
-        document.getElementById("allDone").innerHTML = "Hienoa kaikki tehtävät tehty!";
+
+        if(correctAnswers == 5) {
+            document.getElementById("allDone").innerHTML = "Hienoa kaikki tehtävät tehty! Sait kaikki 5 tehtävää oikein!";
+        } else {
+            document.getElementById("allDone").innerHTML = "Hienoa kaikki tehtävät tehty! Sait oikein " + correctAnswers + " tehtävää viidestä.";
+        }
         document.getElementById("start").innerHTML = "Kokeile uudestaan"
         document.getElementById("start").style.display = "block";
         
