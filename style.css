@@ -81,7 +81,8 @@ a{
 }
 
 body{
-    background-color: rgb(204, 225, 231)
+    background-color: rgb(204, 225, 231);
+    font-family: perusteksti;
 }
 
 #welcome{
@@ -94,3 +95,7 @@ body{
 h1,h2,h3,h4,h5{
     font-family: FuzzyBubbles;
 }
+@font-face {
+    font-family: perusteksti;
+    src: url(suunnittelu/Comfortaa-Regular.ttf);
+  }
