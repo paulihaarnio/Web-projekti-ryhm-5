@@ -87,3 +87,10 @@ body{
 #welcome{
     text-align: center;
 }
+@font-face {
+    font-family: FuzzyBubbles;
+    src: url(suunnittelu/FuzzyBubbles-Bold.ttf);
+  }
+h1,h2,h3,h4,h5{
+    font-family: FuzzyBubbles;
+}
