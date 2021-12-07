@@ -41,11 +41,11 @@
                       <span class="ms-1 d-none d-sm-inline">Maantieto</span>
                   </a>
               </li>
-              <li>
+              <li class="nav-item">
                   <a href="../pages/petovisa.html" class="nav-link text-truncate">
                       <span class="ms-1 d-none d-sm-inline">Petoeläin-visa</span> </a>
               </li>
-              <li>
+              <li class="nav-item">
                   <a href="../pages/lepi.html" class="nav-link text-truncate">
                       <span class="ms-1 d-none d-sm-inline">Musiikki</span></a>
               </li>
@@ -112,8 +112,10 @@
             <span id="correct">0</span>/<span id="allQuestions">5</span>
           </div>
         </div>
-        <div class="row"  id="result">
-            <p> Oikein / Väärin</p>
+        <div class="row">
+          <div class="col">
+            <p id="result"></p>
+          </div>
         </div>
         <div class="row">
           <div class="col">
@@ -126,7 +128,7 @@
    
     <footer class="footer fixed-bottom">
       <img src="../kuvat/logo.png" alt="" id="logo2">
-      <p>Copyright Muksuvisa corporation</p>
+      <p><i class="far fa-copyright"></i> Muksuvisa corporation</p>
       <p>Matikkavisa 2: Pinja Åman</p>
     </footer>
   </body>

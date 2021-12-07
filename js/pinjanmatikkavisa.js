@@ -28,6 +28,7 @@ let question5Answers = [12, 13, 14, 16];
 allAnswers.push(question1Answers, question2Answers, question3Answers, question4Answers, question5Answers);
 
 let rightAnswers = ["a", "b", "a", "c", "c"];
+let rightIndexes = [0, 1, 0, 2, 2]
 
 
 /* tehtävän tarkistus "tarkista"-nappia painettaessa. Muuttujaan
@@ -44,12 +45,14 @@ document.getElementById("submit").addEventListener("click", function () {
     }
     
     if(rightAnswers[i - 1] == selectedValue) {
-        result.innerHTML = "Oikein meni";
+        result.innerHTML = "Oikein meni, oikea vastaus on " + allAnswers[i - 1][rightIndexes[i - 1]] + ".";
         correctAnswers++;
+        document.querySelector("#quizContainer").style.borderColor = "#86FA6A";
         
         
     } else {
-        result.innerHTML = "Väärin meni"
+        result.innerHTML = "Väärin meni, oikea vastaus on " + allAnswers[i - 1][rightIndexes[i - 1]] + ".";
+        document.querySelector("#quizContainer").style.borderColor = "#F64040";
         
     }
 
@@ -67,8 +70,9 @@ document.getElementById("submit").addEventListener("click", function () {
 /*seuraava kysymys painike. Painiketta pystyy painamaan vasta kun 
 tehtävä on ensin tarkistettu */
 document.getElementById("nextQuestion").addEventListener("click", function() {
-   
+    result.innerHTML = "";
     submitButton.disabled = false;
+    document.querySelector("#quizContainer").style.borderColor = "#888888";
 
    for(let i = 0; i < radios.length; i++) {
        if(radios[i].checked) {
