@@ -4,8 +4,8 @@ let counter2=0
 
 
 function addNumbers(){
-    document.getElementById("one").innerHTML=Number(Math.floor(Math.random() * 25) + 1);
-    document.getElementById("two").innerHTML=Number(Math.floor(Math.random() * 17) + 1);
+    document.getElementById("one").innerHTML=Number(Math.floor(Math.random() * 40) + 1);
+    document.getElementById("two").innerHTML=Number(Math.floor(Math.random() * 40) + 1);
     document.getElementById("vastaus").value=""
     document.getElementById("vastausKenttä").innerText=""
     counter=0
@@ -26,8 +26,8 @@ function check(){
     if(vastaus==""){
         document.getElementById("vastausKenttä").innerText="Syötä vastaus."}
         else{
-    document.getElementById("one").innerHTML=Number(Math.floor(Math.random() * 25) + 1);
-    document.getElementById("two").innerHTML=Number(Math.floor(Math.random() * 17) + 1);
+            document.getElementById("one").innerHTML=Number(Math.floor(Math.random() * 40) + 1);
+            document.getElementById("two").innerHTML=Number(Math.floor(Math.random() * 40) + 1);
     document.getElementById("vastaus").value=""
     if(vastaus==summa){
         document.getElementById("vastausKenttä").innerText="Oikea vastaus, hienoa!"+"✅"
