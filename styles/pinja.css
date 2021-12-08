@@ -1,20 +1,30 @@
-body {
-    height: 100%;
+html body {
+    background-color: #EAFFA3;
+    width: 100%;
 }
 
-footer {
-    position: fixed;
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+.container-fluid {
+    padding-bottom: 6.9rem;
+}
+
+.footer {
+    position: absolute;
     bottom: 0;
-    background-color: #65DCFF;
-    border-top: solid #0352fc 4px;
-    height: 110px;
+    height: 6.9rem;
     width: 100%;
     padding-left: 1em;
+    background-color: #A3EAFF;
+    border-top: solid #0352fc 4px;
 }
 
 #quizContainer {
     background-color: #FFB8A3;
-    border: 2px solid #fc0314;
+    border: 4px solid #888888;
     border-radius: 5px;
     padding: 10px;
     padding-left: 20px;
