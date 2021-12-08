@@ -114,7 +114,7 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
 //visan aloituspainike, ensimmäinen tehtävä tulee esiin kun nappia painaa. Vaihtuu kokeile uudestaan painikkeeksi visan päätteeksi
 document.getElementById("start").onclick = function() {
     document.getElementById("allQuestions").innerHTML = 5;
-    answeredQuestions = 0;
+    document.getElementById("answeredQuestions").innerHTML = 0;
     correctAnswers = 0;
     
     i = 1;
