@@ -3,14 +3,24 @@ html body {
     background-color: #EAFFA3;
 }
 
-footer {
-    position: fixed;
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+.container-fluid {
+    padding-bottom: 6.9rem;
+}
+
+#footer {
+    position: absolute;
     bottom: 0;
-    background-color: #A3EAFF;
-    border-top: solid #0352fc 4px;
-    height: 110px;
+    
+    height: 6.9rem;
     width: 100%;
     padding-left: 1em;
+    background-color: #A3EAFF;
+    border-top: solid #0352fc 4px;
 }
 
 #quizContainer {
