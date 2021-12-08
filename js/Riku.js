@@ -8,7 +8,7 @@
  //let loppuRuutu=document.getElementById("myText").innerHTML="Peli päättyi. Sait "+ pisteet + " oikein";
  //tähän tulee vikaruutu
 //kysymys 1
- let normiNappi1='<button type="button" class="btn btn-secondary" onclick="ei()">Ruotsi</button>';
+ let normiNappi1='<button type="button" class="btn btn-secondary" name="vari" onclick="ei()">Ruotsi</button>';
  let normiNappi2='<button type="button" class="btn btn-secondary" onclick="ei()">Norja</button>';
  let normiNappi3='<button type="button" class="btn btn-secondary" onclick="ei()">Suomi</button>';
  let oikeeNappi1='<button type="button" class="btn btn-secondary" onclick="jooo()">Tanska</button>';
@@ -39,6 +39,9 @@
  let oikeeNappi5='<button type="button" class="btn btn-secondary" onclick="jooo()" >107</button>'
  let tyhjaNappi="<span></span>";
  toiminto=true;
+ 
+    
+
  function jooo() {
    
    
@@ -47,13 +50,13 @@
    if (toiminto===true ){
     pisteet=pisteet + 1;
     document.getElementById("tekstia").innerHTML="Oikein meni!" + "<br>" + "Siirry seuraavaan kysymykseen.";
-    document.getElementById("button").className = 'green';
+    
     console.log(pisteet)
     
    }
    if (toiminto===false) {
      pisteet=pisteet;
-   
+  
    
    } 
    toiminto=false
@@ -65,6 +68,7 @@
   console.log(pisteet)
   if (toiminto===true ) {
   document.getElementById("tekstia").innerHTML="Väärin meni!" + "<br>" + "Siirry seuraavaan kysymykseen.";
+  
 } if (toiminto == false) {
   
 }
@@ -88,6 +92,7 @@ btn.addEventListener("click", changeText);
 
 
     function changeText(){
+    
       if (vastattu <= 5) {
        var searchTerm =  text.innerHTML  ;
        var index=texts.indexOf(searchTerm)+1;
@@ -95,12 +100,33 @@ btn.addEventListener("click", changeText);
           var result=texts[index];
           text.innerHTML = result;
         } else {
+          let lopputeksti=""
+          if(pisteet==0){
+            lopputeksti= "Huonosti meni"+"😭"
+        }
+        if(pisteet==1){
+          lopputeksti= "Harjoittele enemmän"+'🥶'
+        }
+        if(pisteet==2){
+          lopputeksti= "Ei kovin kummoinen"+'🥱'
+        }
+        if(pisteet==3){
+          lopputeksti= "Hieno työtä"+'🥵'
+        }
+        if(pisteet==4){
+          lopputeksti= "Melkein kaikki oikein!"+'😍'
+        }
+        if(pisteet==5){
+          lopputeksti= "Kaikki oikein! Hienoa"+"🤯"
+        }
           document.getElementById("myBtn").disabled=true
           document.getElementsByClassName("mySlides").innerHTML=""
-          text.innerHTML= document.getElementById("myText").innerHTML="Peli päättyi. Sait "+"<br>" + pisteet + " oikein 😂👌" + "<br>" + "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Katso Oikeat vastaukset</a>";
+          text.innerHTML= document.getElementById("myText").innerHTML=
+          "<ul style='list-style-type:none; padding-right:40px;'><li>Peli päättyi.</li><li> Sait " + pisteet + "/5 oikein,</li><li> "+lopputeksti+"</li></ul>" + "<ol>Oikea vastaukset:<li>Tanska</li><li>Berliini</li><li>Mount Everest</li><li>Amazon</li><li>107</li></ol>";
         }
+       
     	  return;
-      
+
         
       }
        
