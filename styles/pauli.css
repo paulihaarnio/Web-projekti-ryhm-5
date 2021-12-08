@@ -3,8 +3,8 @@
 #peli{
     margin-right: auto;
     margin-left: auto;
-    width: 40em;
-    height: 20em;
+    width: auto;
+    height: auto;
     background-color: #FFB8A3;
     border-radius: 5px;
     padding:10px;
@@ -17,7 +17,6 @@
     width: 3em;
     height: 1.8em;
 }
-
 
 
 
