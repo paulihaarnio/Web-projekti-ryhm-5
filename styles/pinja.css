@@ -34,6 +34,7 @@ html body {
 #question, p {
     margin-bottom: 10px;
     margin-left: 5px;
+    font-family: perusteksti;
 }
 
 label {
@@ -52,3 +53,14 @@ label {
 span {
     display: inline-block;
 }
+
+#points {
+    padding: 5px;
+    margin-bottom: 20px;
+    align-content: flex-end;
+}
+
+@font-face {
+    font-family: perusteksti;
+    src: url(suunnittelu/Comfortaa-Regular.ttf);
+  }

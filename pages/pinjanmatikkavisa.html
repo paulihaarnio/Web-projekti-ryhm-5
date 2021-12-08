@@ -82,6 +82,15 @@
       <span id="allDone"> Matikka 2 -osio sisältää plus-, miinus-, kerto- ja jakolaskuja.<br> Paina nappia aloittaaksesi tehtävät</span>
       <div id="quizContainer" style="display: none;" class="flex-fill">
         
+        <div class="row" id="points">
+          <div class="col">
+            <span>Vastatut: &nbsp</span><span id="answeredQuestions">0</span>/<span id="allQuestions">5</span>
+          </div>
+          <div class="col">
+            <span>Oikein: &nbsp</span><span id="correct">0</span>/<span id="allQuestions">5</span>
+          </div>
+        </div>
+
         <div class="row" ><h4 id="question"></h4></div>
         
         <div class="row">
@@ -108,9 +117,7 @@
         </div>
         
         <div class="row">
-          <div class="col">
-            <span id="correct">0</span>/<span id="allQuestions">5</span>
-          </div>
+          
         </div>
         <div class="row">
           <div class="col">

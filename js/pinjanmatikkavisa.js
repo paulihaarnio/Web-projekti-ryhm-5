@@ -7,6 +7,7 @@ let dAnswer = document.getElementById("dAns");
 let radios = document.getElementsByName("radioButton");
 let submitButton = document.querySelector("#submit")
 let i = 1;
+let answeredQuestions = 0;
 let correctAnswers = 0;
 let answered = false;
 
@@ -47,17 +48,20 @@ document.getElementById("submit").addEventListener("click", function () {
     if(rightAnswers[i - 1] == selectedValue) {
         result.innerHTML = "Oikein meni, oikea vastaus on " + allAnswers[i - 1][rightIndexes[i - 1]] + ".";
         correctAnswers++;
+        answeredQuestions++;
         document.querySelector("#quizContainer").style.borderColor = "#86FA6A";
         
         
     } else {
         result.innerHTML = "Väärin meni, oikea vastaus on " + allAnswers[i - 1][rightIndexes[i - 1]] + ".";
+        answeredQuestions++;
         document.querySelector("#quizContainer").style.borderColor = "#F64040";
         
     }
 
     answered = true;
     document.getElementById("correct").innerHTML = correctAnswers;
+    document.getElementById("answeredQuestions").innerHTML = answeredQuestions;
 
     if(answered) {
         submitButton.disabled = true;
@@ -98,7 +102,7 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
         if(correctAnswers == 5) {
             document.getElementById("allDone").innerHTML = "Hienoa kaikki tehtävät tehty! Sait kaikki 5 tehtävää oikein!";
         } else {
-            document.getElementById("allDone").innerHTML = "Hienoa kaikki tehtävät tehty! Sait oikein " + correctAnswers + " tehtävää viidestä.";
+            document.getElementById("allDone").innerHTML = "Kaikki tehtävät tehty! Sait oikein " + correctAnswers + " tehtävää viidestä.";
         }
         document.getElementById("start").innerHTML = "Kokeile uudestaan"
         document.getElementById("start").style.display = "block";
@@ -110,7 +114,9 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
 //visan aloituspainike, ensimmäinen tehtävä tulee esiin kun nappia painaa. Vaihtuu kokeile uudestaan painikkeeksi visan päätteeksi
 document.getElementById("start").onclick = function() {
     document.getElementById("allQuestions").innerHTML = 5;
+    answeredQuestions = 0;
     correctAnswers = 0;
+    
     i = 1;
     document.getElementById("allDone").innerHTML = "";
     document.getElementById("quizContainer").style.display = "block";
