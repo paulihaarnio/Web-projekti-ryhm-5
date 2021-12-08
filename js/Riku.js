@@ -42,16 +42,18 @@
  function jooo() {
    
    
-   document.getElementById("tekstia").innerHTML="Oikein meni!" + "<br>" + "Siirry seuraavaan kysymykseen.";
+  
   
    if (toiminto===true ){
     pisteet=pisteet + 1;
-    
+    document.getElementById("tekstia").innerHTML="Oikein meni!" + "<br>" + "Siirry seuraavaan kysymykseen.";
+    document.getElementById("button").className = 'green';
     console.log(pisteet)
     
    }
    if (toiminto===false) {
      pisteet=pisteet;
+   
    
    } 
    toiminto=false
@@ -61,7 +63,11 @@
  function ei() {
   pisteet=pisteet
   console.log(pisteet)
+  if (toiminto===true ) {
   document.getElementById("tekstia").innerHTML="Väärin meni!" + "<br>" + "Siirry seuraavaan kysymykseen.";
+} if (toiminto == false) {
+  
+}
   toiminto=false;
   return
 }
@@ -91,7 +97,7 @@ btn.addEventListener("click", changeText);
         } else {
           document.getElementById("myBtn").disabled=true
           document.getElementsByClassName("mySlides").innerHTML=""
-          text.innerHTML= document.getElementById("myText").innerHTML="Peli päättyi. Sait "+ pisteet + " oikein";
+          text.innerHTML= document.getElementById("myText").innerHTML="Peli päättyi. Sait "+"<br>" + pisteet + " oikein 😂👌" + "<br>" + "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Katso Oikeat vastaukset</a>";
         }
     	  return;
       
