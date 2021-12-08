@@ -1,24 +1,21 @@
-body {
+html body {
     height: 100%;
+    background-color: #EAFFA3;
 }
 
 footer {
     position: fixed;
     bottom: 0;
-    background-color: #65DCFF;
+    background-color: #A3EAFF;
     border-top: solid #0352fc 4px;
     height: 110px;
     width: 100%;
     padding-left: 1em;
 }
 
-#container-fluid {
-    min-height: 100vh;
-    position: relative;
-}
 #quizContainer {
     background-color: #FFB8A3;
-    border: 2px solid #fc0314;
+    border: 2px solid #888888;
     border-radius: 5px;
     padding: 10px;
     padding-left: 20px;
