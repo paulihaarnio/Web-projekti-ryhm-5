@@ -7,6 +7,7 @@ let dAnswer = document.getElementById("dAns");
 let radios = document.getElementsByName("radioButton");
 let submitButton = document.querySelector("#submit")
 let i = 1;
+let answeredQuestions = 0;
 let correctAnswers = 0;
 let answered = false;
 
@@ -28,6 +29,7 @@ let question5Answers = [12, 13, 14, 16];
 allAnswers.push(question1Answers, question2Answers, question3Answers, question4Answers, question5Answers);
 
 let rightAnswers = ["a", "b", "a", "c", "c"];
+let rightIndexes = [0, 1, 0, 2, 2]
 
 
 /* tehtävän tarkistus "tarkista"-nappia painettaessa. Muuttujaan
@@ -44,17 +46,22 @@ document.getElementById("submit").addEventListener("click", function () {
     }
     
     if(rightAnswers[i - 1] == selectedValue) {
-        result.innerHTML = "Oikein meni";
+        result.innerHTML = "Oikein meni, oikea vastaus on " + allAnswers[i - 1][rightIndexes[i - 1]] + ".";
         correctAnswers++;
+        answeredQuestions++;
+        document.querySelector("#quizContainer").style.borderColor = "#86FA6A";
         
         
     } else {
-        result.innerHTML = "Väärin meni"
+        result.innerHTML = "Väärin meni, oikea vastaus on " + allAnswers[i - 1][rightIndexes[i - 1]] + ".";
+        answeredQuestions++;
+        document.querySelector("#quizContainer").style.borderColor = "#F64040";
         
     }
 
     answered = true;
     document.getElementById("correct").innerHTML = correctAnswers;
+    document.getElementById("answeredQuestions").innerHTML = answeredQuestions;
 
     if(answered) {
         submitButton.disabled = true;
@@ -67,8 +74,9 @@ document.getElementById("submit").addEventListener("click", function () {
 /*seuraava kysymys painike. Painiketta pystyy painamaan vasta kun 
 tehtävä on ensin tarkistettu */
 document.getElementById("nextQuestion").addEventListener("click", function() {
-   
+    result.innerHTML = "";
     submitButton.disabled = false;
+    document.querySelector("#quizContainer").style.borderColor = "#888888";
 
    for(let i = 0; i < radios.length; i++) {
        if(radios[i].checked) {
@@ -88,10 +96,14 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
         dAnswer.innerHTML += allAnswers[i][3];
         i = i + 1;
         
-        console.log(i);
     } else if(i == 5 && answered == true) {
         document.getElementById("quizContainer").style.display = "none";
-        document.getElementById("allDone").innerHTML = "Hienoa kaikki tehtävät tehty!";
+
+        if(correctAnswers == 5) {
+            document.getElementById("allDone").innerHTML = "Hienoa kaikki tehtävät tehty! Sait kaikki 5 tehtävää oikein!";
+        } else {
+            document.getElementById("allDone").innerHTML = "Kaikki tehtävät tehty! Sait oikein " + correctAnswers + " tehtävää viidestä.";
+        }
         document.getElementById("start").innerHTML = "Kokeile uudestaan"
         document.getElementById("start").style.display = "block";
         
@@ -102,7 +114,9 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
 //visan aloituspainike, ensimmäinen tehtävä tulee esiin kun nappia painaa. Vaihtuu kokeile uudestaan painikkeeksi visan päätteeksi
 document.getElementById("start").onclick = function() {
     document.getElementById("allQuestions").innerHTML = 5;
+    document.getElementById("answeredQuestions").innerHTML = 0;
     correctAnswers = 0;
+    
     i = 1;
     document.getElementById("allDone").innerHTML = "";
     document.getElementById("quizContainer").style.display = "block";

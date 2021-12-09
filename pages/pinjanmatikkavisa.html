@@ -41,11 +41,11 @@
                       <span class="ms-1 d-none d-sm-inline">Maantieto</span>
                   </a>
               </li>
-              <li>
+              <li class="nav-item">
                   <a href="../pages/petovisa.html" class="nav-link text-truncate">
                       <span class="ms-1 d-none d-sm-inline">Petoeläin-visa</span> </a>
               </li>
-              <li>
+              <li class="nav-item">
                   <a href="../pages/lepi.html" class="nav-link text-truncate">
                       <span class="ms-1 d-none d-sm-inline">Musiikki</span></a>
               </li>
@@ -53,7 +53,7 @@
       </div>
     </div>
           
-    
+    <div id="page-container">
     <div class="container-fluid">
       <div class="row">
         <header>
@@ -63,7 +63,7 @@
             <div class="col-md-auto">
               <h1>Muksuvisa</h1>
             </div>
-            <div class="col-6">
+            <div class="col">
               <img src="../kuvat/logo.png" alt="" id="logo">
             </div>
             <div class="col-2">
@@ -82,23 +82,32 @@
       <span id="allDone"> Matikka 2 -osio sisältää plus-, miinus-, kerto- ja jakolaskuja.<br> Paina nappia aloittaaksesi tehtävät</span>
       <div id="quizContainer" style="display: none;" class="flex-fill">
         
+        <div class="row" id="points">
+          <div class="col">
+            <span>Vastatut: &nbsp</span><span id="answeredQuestions">0</span>/<span id="allQuestions">5</span>
+          </div>
+          <div class="col">
+            <span>Oikein: &nbsp</span><span id="correct">0</span>/<span id="allQuestions">5</span>
+          </div>
+        </div>
+
         <div class="row" ><h4 id="question"></h4></div>
         
         <div class="row">
           <label for="a">A) 
-            <input type="radio" name="radioButton" id="a" value="a">
+            <input class="form-check-input" type="radio" name="radioButton" id="a" value="a">
             <span id="aAns"></span>
           </label>
           <label for="b">B) 
-            <input type="radio" name="radioButton" id="b" value="b">
+            <input class="form-check-input" type="radio" name="radioButton" id="b" value="b">
             <span id="bAns"></span>
           </label>
           <label for="c">C) 
-            <input type="radio" name="radioButton" id="c" value="c">
+            <input class="form-check-input" type="radio" name="radioButton" id="c" value="c">
             <span id="cAns"></span>
           </label>
           <label for="d">D) 
-            <input type="radio" name="radioButton" id="d" value="d">
+            <input class="form-check-input" type="radio" name="radioButton" id="d" value="d">
             <span id="dAns"></span>
           </label>
             
@@ -108,12 +117,12 @@
         </div>
         
         <div class="row">
-          <div class="col">
-            <span id="correct">0</span>/<span id="allQuestions">5</span>
-          </div>
+          
         </div>
-        <div class="row"  id="result">
-            <p> Oikein / Väärin</p>
+        <div class="row">
+          <div class="col">
+            <p id="result"></p>
+          </div>
         </div>
         <div class="row">
           <div class="col">
@@ -124,10 +133,11 @@
       <button type="button" id="start" class="button">Aloita tehtävät</button>
     </div>
    
-    <footer class="footer fixed-bottom">
+    <footer class="footer mt-auto">
       <img src="../kuvat/logo.png" alt="" id="logo2">
-      <p>Copyright Muksuvisa corporation</p>
+      <p><i class="far fa-copyright"></i> Muksuvisa corporation</p>
       <p>Matikkavisa 2: Pinja Åman</p>
     </footer>
+  </div>
   </body>
 </html>

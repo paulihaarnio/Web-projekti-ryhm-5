@@ -3,14 +3,14 @@
 #peli{
     margin-right: auto;
     margin-left: auto;
-    width: 40em;
-    height: 20em;
+    width: auto;
+    height: auto;
     background-color: #FFB8A3;
     border-radius: 5px;
     padding:10px;
     border:4px solid #FF8865 ;
     margin-bottom: 20px;
-    display: inline-block;
+    display: block;
 }
 
 #vastaus{
@@ -19,11 +19,5 @@
 }
 
 
-button{
-    border: 1px solid ;
-    border-radius: 3px;
-    width: auto;
-    height: 1.8em;
-}
 
 

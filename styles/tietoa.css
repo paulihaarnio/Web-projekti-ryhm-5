@@ -1,0 +1,11 @@
+article a{
+    text-decoration: none;
+    color: black;
+    display: inline;
+}
+a:hover{
+    color: #9c1c23;
+}
+article{
+    padding: 0.3rem;
+}
