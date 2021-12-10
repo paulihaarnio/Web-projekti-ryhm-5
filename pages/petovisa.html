@@ -78,30 +78,41 @@
         </header>
       </div>
 
-      <div class="row" id="content">
-        <div class="col" id="quiz">
-            <h1 id="question">Kysymys</h1>
-            <img src="" alt="" id="questionImg">
-            <div id="answers">
-                <label for="answer1"></label>
-                <input type="radio" name="answer" id="answer1" class="">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10" id="quiz">
+              <h1 id="question">Kysymys</h1>
+              <img src="" alt="" id="questionImg">
+              <div id="answers">
+                <div class="row">
+                  <div class="col">
+                    <div class="btn-group">
+                      
+                      <input class="btn-check" type="radio" name="answer" id="answer1" autocomplete="off">
+                      <label class="btn btn-secondary" for="answer1"></label>
 
-                <label for="answer2"></label>
-                <input type="radio" name="answer" id="answer2" class="">
-
-                <label for="answer3"></label>
-                <input type="radio" name="answer" id="answer3" class="">
-
-                <label for="answer4"></label>
-                <input type="radio" name="answer" id="answer4" class="">
-            </div>
-            <button id="submit">submit</button><span id="result"></span>
-            <button id="next" disabled>next</button>
+                      <input class="btn-check" type="radio" name="answer" id="answer2" autocomplete="off">
+                      <label class="btn btn-secondary" for="answer2"></label>
+                      
+                      <input class="btn-check" type="radio" name="answer" id="answer3" autocomplete="off">
+                      <label class="btn btn-secondary" for="answer3"></label>
+                      
+                      <input class="btn-check" type="radio" name="answer" id="answer4" autocomplete="off">
+                      <label class="btn btn-secondary" for="answer4"></label>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button id="submit">submit</button><span id="result"></span>
+              <button id="next" disabled>next</button>
+          </div>
         </div>
       </div>
+      
 
     </div>
-    <footer class="footer mt-auto">
+    <footer class="footer fixed-bottom">
       <img src="../kuvat/logo.png" alt="" id="logo2">
       <p><i class="far fa-copyright"></i> Muksuvisa™ corporation</p>
         <p>Contact: CEO of Muksuvisa™ corporation Pauli Haarnio 0503072295 <br>Muksu teaching solutions since 2021</p>
