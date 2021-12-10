@@ -1,12 +1,12 @@
 let printedQuestion = 0;
 
-let results = [];
-
 class Question {
     question = "";
     img = "";
     answers = [];
+    correntResult = false;
     correctAnswer = "";
+    explanation = "";
 
     constructor(q, img) {
         this.question = q;
@@ -25,12 +25,16 @@ class Question {
         return this.answers;
     }
 
-    getResult() {
+    getCorrectResult() {
         return this.result;
     }
 
     getCorrectAnswer() {
         return this.correctAnswer;
+    }
+
+    getExplanation() {
+        return this.explanation;
     }
 
     setQuestion(q) {
@@ -45,12 +49,16 @@ class Question {
         this.answers = array;
     }
 
-    setResult(boolean) {
+    setCorrectResult(boolean) {
         this.result = boolean;
     }
 
     setCorrectAnswer(string) {
         this.correctAnswer = string;
+    }
+
+    setExplanation(string) {
+        this.explanation = string;
     }
     
     printQuestion() {
@@ -106,6 +114,7 @@ answers0[2] = "Karhu";
 answers0[3] = "Susi";
 questions[0].setAnswers(answers0);
 questions[0].setCorrectAnswer("Ahma");
+questions[0].setExplanation("Ahma on Suomen suurin näätäeläin, ja sillä on leveät ja lyhyet raajat. Ahman raajat ja kuono ovat mustat");
 
 questions[1] = new Question("Mikä väittämistä EI OLE totta?", "#");
 let answers1 = [];
@@ -115,6 +124,7 @@ answers1[2] = "Karhut ovat kaikkiruokaisia";
 answers1[3] = "Karhu on Suomen suurin petoeläin";
 questions[1].setAnswers(answers1);
 questions[1].setCorrectAnswer("Karhut ovat laumaeläimiä");
+questions[1].setExplanation("Karhut ovat yksineläjiä, ne eivät siis kulje laumassa");
 
 questions[2] = new Question("Mikä petoeläin on kuvassa", "../kuvat/kärppä.jpg");
 let answers2 = [];
@@ -124,6 +134,7 @@ answers2[2] = "Mäyrä";
 answers2[3] = "Ilves";
 questions[2].setAnswers(answers2);
 questions[2].setCorrectAnswer("Kärppä");
+questions[2].setExplanation("Kärpän voi tunnistaa sen mustasta hännänpäästä");
 
 questions[3] = new Question("Minkä petoeläimen jäljet ovat kuvassa?", "../kuvat/kettu.jpg");
 let answers3 = [];
@@ -133,6 +144,7 @@ answers3[2] = "Susi";
 answers3[3] = "Ilves";
 questions[3].setAnswers(answers3);
 questions[3].setCorrectAnswer("Kettu");
+questions[3].setExplanation("Ketun jäljet muistuttavat helminauhaa sen kulkiessa nopeasti");
 
 questions[4] = new Question("Miksi ilveksellä on leveät tassut?", "#");
 let answers4 = [];
@@ -142,6 +154,7 @@ answers4[2] = "Paksujen kynsien vuoksi";
 answers4[3] = "Ne helpottavat puuhun kiipeämistä";
 questions[4].setAnswers(answers4);
 questions[4].setCorrectAnswer("Ne helpottavat lumen päällä kävelyä");
+questions[4].setExplanation("Ilveksen paino jakautuu leveällä tassulla laajemmalle alueelle, jolloin lumi ei upota sen tassun alla yhtä herkästi");
 
 document.querySelector("#submit").addEventListener("click", submitAnswer);
 document.querySelector("#next").addEventListener("click", nextQuestion);
@@ -158,10 +171,10 @@ function submitAnswer() {
 
     if(answer.classList.contains("correct")) {
         document.getElementById("result").innerHTML = "Oikein!";
-        results[printedQuestion] = true;
+        questions[printedQuestion].setCorrectResult(true);
     }else {
         document.getElementById("result").innerHTML = "Väärin";
-        results[printedQuestion] = false;
+        questions[printedQuestion].setCorrectResult(false);
     }
 
     let submitButton = document.getElementById("submit");
@@ -195,8 +208,10 @@ function printResults() {
 
     let correct = 0;
     let all = 0;
-    results.forEach(result => {
+    questions.forEach(question => {
         all++;
+
+        let result = question.getCorrectResult();
         if(result == true) {
             correct++;
         }
@@ -209,7 +224,7 @@ function printResults() {
 
     let button = document.createElement("button");
     button.textContent = "Yritä uudelleen";
-    button.addEventListener("click", location.reload);
+    button.addEventListener("click", () => location.reload());
 
     div.append(h2, h1, h22, button);
 
@@ -221,8 +236,29 @@ function printResults() {
     let header = document.createElement("h1");
     header.textContent = "Vastausten erittely";
 
-    
+    col.appendChild(header);
 
-    col.append(header);
+    for(let i=0; i<questions.length; i++) {
+
+        let p = document.createElement("p");
+        p.innerHTML = questions[i].getQuestion() + "<br>";
+        
+        let span = document.createElement("span");
+        let correctResult = questions[i].getCorrectResult();
+        
+        if(correctResult) {
+            span.textContent = "Vastasit oikein";
+            span.style.color = "green";
+        }else {
+            span.textContent = "Vastasit väärin";
+            span.style.color = "red";
+        }
+
+        p.appendChild(span);
+        p.innerHTML += "<br>Oikea vastaus: " + questions[i].getCorrectAnswer() + "<br>" + questions[i].getExplanation();
+
+        col.appendChild(p);
+    }
+
     content.appendChild(col);
 }
