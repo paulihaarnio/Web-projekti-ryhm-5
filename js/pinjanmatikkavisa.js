@@ -46,7 +46,7 @@ document.getElementById("submit").addEventListener("click", function () {
     }
     
     if(rightAnswers[i - 1] == selectedValue) {
-        result.innerHTML = "Oikein meni, oikea vastaus on " + allAnswers[i - 1][rightIndexes[i - 1]] + ".";
+        result.innerHTML = "Oikein meni!";
         correctAnswers++;
         answeredQuestions++;
         document.querySelector("#quizContainer").style.borderColor = "#86FA6A";
