@@ -46,7 +46,7 @@ document.getElementById("submit").addEventListener("click", function () {
     }
     
     if(rightAnswers[i - 1] == selectedValue) {
-        result.innerHTML = "Oikein meni, oikea vastaus on " + allAnswers[i - 1][rightIndexes[i - 1]] + ".";
+        result.innerHTML = "Oikein meni!";
         correctAnswers++;
         answeredQuestions++;
         document.querySelector("#quizContainer").style.borderColor = "#86FA6A";
@@ -62,6 +62,8 @@ document.getElementById("submit").addEventListener("click", function () {
     answered = true;
     document.getElementById("correct").innerHTML = correctAnswers;
     document.getElementById("answeredQuestions").innerHTML = answeredQuestions;
+    document.getElementsByClassName('progress-bar').item(0).setAttribute('aria-valuenow', answeredQuestions*20);
+    document.getElementsByClassName('progress-bar').item(0).setAttribute('style','width:'+Number(answeredQuestions*20)+'%');
 
     if(answered) {
         submitButton.disabled = true;
@@ -77,6 +79,7 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
     result.innerHTML = "";
     submitButton.disabled = false;
     document.querySelector("#quizContainer").style.borderColor = "#888888";
+    
 
    for(let i = 0; i < radios.length; i++) {
        if(radios[i].checked) {
@@ -116,6 +119,9 @@ document.getElementById("start").onclick = function() {
     document.getElementById("allQuestions").innerHTML = 5;
     document.getElementById("answeredQuestions").innerHTML = 0;
     correctAnswers = 0;
+    answeredQuestions = 0;
+    document.getElementsByClassName('progress-bar').item(0).setAttribute('aria-valuenow', 0);
+    document.getElementsByClassName('progress-bar').item(0).setAttribute('style','width:'+ 0 +'%');
     
     i = 1;
     document.getElementById("allDone").innerHTML = "";
