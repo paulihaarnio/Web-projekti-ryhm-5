@@ -26,7 +26,9 @@ function check(){
         document.getElementById("vastausKenttä").innerText="Paina aloita nappia"
     }else{
     if(vastaus==""){
-        document.getElementById("vastausKenttä").innerText="Syötä vastaus."}
+        document.getElementById("vastausKenttä").innerText="Syötä vastaus."
+        document.getElementById("vastausKenttä").style.color="black";
+    }
         else{
             if(counter==2||counter==3){
                 document.getElementById("merkki").innerText="-"
@@ -64,13 +66,19 @@ function check(){
         document.getElementById("vastausKenttä").style.color="red";
         counter=counter+1
         document.getElementById("tasksDone").innerText=counter
-    }}
+    }
+    
+    }
+    
     if(counter==5){
         showResult()
     }
+    document.getElementsByClassName("progress-bar").item(0).setAttribute("aria-valuenow",Number(counter*20))
+    document.getElementsByClassName("progress-bar").item(0).setAttribute("style","width:"+Number(counter*20)+"%" );
 }
 }
 }
+
 function results(){
     document.getElementById("peli").style.fontSize = "2.7em";
     var peli=document.getElementById("peli")
