@@ -172,21 +172,31 @@ button {
   #logo2 {
     display: none;
   }
-  .container-fluid {
-  justify-content: space-between !important;
-  }
-  header{
-    display:flex;
-    align-items: center;
-    margin-bottom: 10px;
-    align-content: center;
-    justify-content: space-between;
-    
-  }
+
   footer {
     text-align: center;
   }
   #otsikko {
     display: none;
+  }
+  .col-1 {
+    padding-left:33%;
+  }
+  .col-3 {
+    padding-right:33%;
+    padding-left: 10%;
+  }
+  .p-2 {
+    display: flex;
+    justify-content: center;
+  }
+  #tekstia {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+  }
+  #offcanvas{
+    right: 50px;  
   }
 }
