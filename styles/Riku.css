@@ -173,13 +173,18 @@ button {
     display: none;
   }
   .container-fluid {
-  justify-content: space-evenly;
+  justify-content: space-between !important;
   }
   header{
     display:flex;
     align-items: center;
     margin-bottom: 10px;
+    align-content: center;
+    justify-content: space-between;
     
+  }
+  footer {
+    text-align: center;
   }
   #otsikko {
     display: none;
