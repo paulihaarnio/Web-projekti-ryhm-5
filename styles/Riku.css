@@ -131,12 +131,7 @@ header{
   float: right;
 
 }
-/* The dots/bullets/indicators */
 
-
-.active, .dot:hover {
-  background-color: #717171;
-}
 
 /* Fading animation */
 .fade {
@@ -161,4 +156,47 @@ button {
 @font-face {
   font-family: FuzzyBubbles;
   src: url(../suunnittelu/FuzzyBubbles-Bold.ttf);
+}
+#myText {
+  font-size: 30px;
+}
+
+@media screen and (max-width:700px) {
+  #myText {
+    font-size: 15px;
+   
+  }
+  #logo {
+    display: none;
+  }
+  #logo2 {
+    display: none;
+  }
+
+  footer {
+    text-align: center;
+  }
+  #otsikko {
+    display: none;
+  }
+  .col-1 {
+    padding-left:33%;
+  }
+  .col-3 {
+    padding-right:33%;
+    padding-left: 10%;
+  }
+  .p-2 {
+    display: flex;
+    justify-content: center;
+  }
+  #tekstia {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+  }
+  #offcanvas{
+    right: 50px;  
+  }
 }
