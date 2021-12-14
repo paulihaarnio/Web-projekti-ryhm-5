@@ -1,5 +1,5 @@
-body {
-    padding-bottom: 120px;
+.container{
+    min-height: 100vh;
 }
 
 #quiz {
@@ -30,4 +30,9 @@ h2 {
 
 span {
     font-weight: bold;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
 }
