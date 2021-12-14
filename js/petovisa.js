@@ -228,7 +228,10 @@ function printResults() {
 
     div.append(h2, h1, h22, button);
 
-    let content = document.getElementById("content");
+    let container = document.getElementById("container");
+
+    let row = document.createElement("div");
+    row.classList.add("row");
 
     let col = document.createElement("div");
     col.classList.add("col");
@@ -259,6 +262,6 @@ function printResults() {
 
         col.appendChild(p);
     }
-
-    content.appendChild(col);
+    row.appendChild(col);
+    container.appendChild(row);
 }
