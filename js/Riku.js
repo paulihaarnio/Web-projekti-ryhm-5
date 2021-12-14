@@ -5,72 +5,63 @@
  let kysymys3=document.getElementById("myText").innerHTML="Mikä on maailman korkein vuori?";
  let kysymys4=document.getElementById("myText").innerHTML="Mikä on maailman pisin joki?";
  let kysymys5=document.getElementById("myText").innerHTML="Kuinka monta kaupunkia Suomessa on?";
- //let loppuRuutu=document.getElementById("myText").innerHTML="Peli päättyi. Sait "+ pisteet + " oikein";
+ 
  //tähän tulee vikaruutu
 //kysymys 1
- let normiNappi1='<button type="button" class="btn btn-secondary" name="vari" onclick="ei()">Ruotsi</button>';
- let normiNappi2='<button type="button" class="btn btn-secondary" onclick="ei()">Norja</button>';
- let normiNappi3='<button type="button" class="btn btn-secondary" onclick="ei()">Suomi</button>';
- let oikeeNappi1='<button type="button" class="btn btn-secondary" onclick="jooo()">Tanska</button>';
+ let normiNappi1='<button type="button" class="btn btn-primary" onclick="ei()">Ruotsi</button>';
+ let normiNappi2='<button type="button" class="btn btn-primary" onclick="ei()">Norja</button>';
+ let normiNappi3='<button type="button" class="btn btn-primary" onclick="ei()">Suomi</button>';
+ let oikeeNappi1='<button type="button" class="btn btn-primary" onclick="jooo()">Tanska</button>';
 
  
  //kysymys 2 
- let normiNappi5='<button type="button" class="btn btn-secondary" onclick="ei()">Lyypekki</button>'
- let normiNappi6='<button type="button" class="btn btn-secondary" onclick="ei()">Frankfurt</button>'
- let normiNappi7='<button type="button" class="btn btn-secondary" onclick="ei()">Bremen</button>'
- let oikeeNappi2='<button type="button" class="btn btn-secondary" onclick="jooo()">Berliini</button>'
+ let normiNappi5='<button type="button" class="btn btn-primary" onclick="ei()">Lyypekki</button>'
+ let normiNappi6='<button type="button" class="btn btn-primary" onclick="ei()">Frankfurt</button>'
+ let normiNappi7='<button type="button" class="btn btn-primary" onclick="ei()">Bremen</button>'
+ let oikeeNappi2='<button type="button" class="btn btn-primary" onclick="jooo()">Berliini</button>'
 
  //kysymys 3
- let normiNappi9='<button type="button" class="btn btn-secondary" onclick="ei()">Kilimanjaro</button>'
- let normiNappi10='<button type="button" class="btn btn-secondary" onclick="ei()">Mount McKinley</button>'
- let normiNappi11='<button type="button" class="btn btn-secondary" onclick="ei()">Vinson Massif</button>'
- let oikeeNappi3='<button type="button" class="btn btn-secondary" onclick="jooo()">Mount Everest</button>'
+ let normiNappi9='<button type="button" class="btn btn-primary" onclick="ei()">Kilimanjaro</button>'
+ let normiNappi10='<button type="button" class="btn btn-primary" onclick="ei()">Mount McKinley</button>'
+ let normiNappi11='<button type="button" class="btn btn-primary" onclick="ei()">Vinson Massif</button>'
+ let oikeeNappi3='<button type="button" class="btn btn-primary" onclick="jooo()">Mount Everest</button>'
 
  //kysymys 4
- let normiNappi13='<button type="button" class="btn btn-secondary" onclick="ei()">Seine</button>'
- let normiNappi14='<button type="button" class="btn btn-secondary" onclick="ei()">Thames</button>'
- let normiNappi15='<button type="button" class="btn btn-secondary" onclick="ei()">Niili</button>'
- let oikeeNappi4='<button type="button" class="btn btn-secondary" onclick="jooo()">Amazon</button>'
+ let normiNappi13='<button type="button" class="btn btn-primary" onclick="ei()">Seine</button>'
+ let normiNappi14='<button type="button" class="btn btn-primary" onclick="ei()">Thames</button>'
+ let normiNappi15='<button type="button" class="btn btn-primary" onclick="ei()">Niili</button>'
+ let oikeeNappi4='<button type="button" class="btn btn-primary" onclick="jooo()">Amazon</button>'
 
  //kysymys 5
- let normiNappi17='<button type="button" class="btn btn-secondary" onclick="ei()">15</button>'
- let normiNappi18='<button type="button" class="btn btn-secondary" onclick="ei()">125</button>'
- let normiNappi19='<button type="button" class="btn btn-secondary" onclick="ei()">56</button>'
- let oikeeNappi5='<button type="button" class="btn btn-secondary" onclick="jooo()" >107</button>'
+ let normiNappi17='<button type="button" class="btn btn-primary" onclick="ei()">15</button>'
+ let normiNappi18='<button type="button" class="btn btn-primary" onclick="ei()">125</button>'
+ let normiNappi19='<button type="button" class="btn btn-primary" onclick="ei()">56</button>'
+ let oikeeNappi5='<button type="button" class="btn btn-primary" onclick="jooo()" >107</button>'
+
  let tyhjaNappi="<span></span>";
  toiminto=true;
  
-    
-
  function jooo() {
-   
-   
-  
-  
    if (toiminto===true ){
     pisteet=pisteet + 1;
     document.getElementById("tekstia").innerHTML="Oikein meni!" + "<br>" + "Siirry seuraavaan kysymykseen.";
-    
-    console.log(pisteet)
-    
    }
    if (toiminto===false) {
      pisteet=pisteet;
-  
-   
+     document.getElementById("tekstia").innerHTML="Siirry seuraavaan kysymykseen.";
    } 
-   toiminto=false
-   
+   toiminto=false  
    return pisteet
  }
+
+
  function ei() {
   pisteet=pisteet
-  console.log(pisteet)
-  if (toiminto===true ) {
+  if (toiminto === true ) {
   document.getElementById("tekstia").innerHTML="Väärin meni!" + "<br>" + "Siirry seuraavaan kysymykseen.";
   
-} if (toiminto == false) {
-  
+} if (toiminto === false) {
+  document.getElementById("tekstia").innerHTML="Siirry seuraavaan kysymykseen."
 }
   toiminto=false;
   return
@@ -85,11 +76,10 @@
   kysymys5+oikeeNappi5+normiNappi17+normiNappi18+normiNappi19,
   ]; 
   
- var text=document.getElementById("myText");
+var text=document.getElementById("myText");
 var btn = document.getElementById("myBtn");
 btn.addEventListener("click", changeText);
  text.innerHTML = texts[0];
-
 
     function changeText(){
     
@@ -126,22 +116,14 @@ btn.addEventListener("click", changeText);
         }
        
     	  return;
-
-        
       }
-       
-
-
-
-
+       //https://www.w3schools.com/howto/howto_js_slideshow.asp 
        var slideIndex = 1;
        showSlides(slideIndex);
        
        // Next/previous controls
        function plusSlides(n) {
          showSlides(slideIndex += n);
-         
-         
        }
        
        // Thumbnail image controls
@@ -150,12 +132,9 @@ btn.addEventListener("click", changeText);
        }
        
        function showSlides(n) {
-       
-        
         document.getElementById("tekstia").innerHTML="";
-        toiminto=true
-        vastattu=vastattu+1
-        console.log(vastattu)
+        toiminto=true;
+        vastattu=vastattu+1;
          var i;
          var slides = document.getElementsByClassName("mySlides");
          var dots = document.getElementsByClassName("dot");
@@ -170,6 +149,6 @@ btn.addEventListener("click", changeText);
          slides[slideIndex-1].style.display = "block";
          dots[slideIndex-1].className += " active";
         }
-        
+        //
        
       

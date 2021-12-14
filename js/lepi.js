@@ -34,8 +34,9 @@ function correct(){
 document.getElementById("start").onclick = function(){ 
 i = 1;
 info.innerHTML ="";
-document.getElementById("quizContainer").style.display = "block";
+document.getElementById("quizContainer").style.visibility = "visible";
 document.getElementById("start").style.display="none";
+
 /* aAnswer.innerHTML += allAnswers[0][0];
 bAnswer.innerHTML += allAnswers[0][1];
 cAnswer.innerHTML += allAnswers[0][2];
