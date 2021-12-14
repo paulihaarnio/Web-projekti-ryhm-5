@@ -27,6 +27,18 @@ header{
 #navButton {
     vertical-align: right;
     justify-content: space-between;
+    border: 2px solid #0352fc;
+    min-width: 100px;
+    margin-right: 1em;
+    color: blue;
+    font-weight: bold;
+    line-height: 0px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.bi-caret-down {
+    color: blue;
 }
 
 article{
