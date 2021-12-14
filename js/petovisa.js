@@ -170,10 +170,14 @@ function submitAnswer() {
     let answer = document.querySelector("input[name='answer']:checked");
 
     if(answer.classList.contains("correct")) {
-        document.getElementById("result").innerHTML = "Oikein!";
+        let span = document.getElementById("result");
+        span.innerHTML = "Oikein!";
+        span.setAttribute("style", "color: green;");
         questions[printedQuestion].setCorrectResult(true);
     }else {
-        document.getElementById("result").innerHTML = "Väärin";
+        let span = document.getElementById("result");
+        span.innerHTML = "Väärin";
+        span.setAttribute("style", "color: red;");
         questions[printedQuestion].setCorrectResult(false);
     }
 
@@ -225,16 +229,21 @@ function printResults() {
     let button = document.createElement("button");
     button.textContent = "Yritä uudelleen";
     button.addEventListener("click", () => location.reload());
+    button.classList.add("btn", "btn-dark");
 
     div.append(h2, h1, h22, button);
 
-    let content = document.getElementById("content");
+    let container = document.querySelector(".container");
+
+    let row = document.createElement("div");
+    row.classList.add("row");
 
     let col = document.createElement("div");
     col.classList.add("col");
 
     let header = document.createElement("h1");
     header.textContent = "Vastausten erittely";
+    header.setAttribute("style", "margin-top: 50px;")
 
     col.appendChild(header);
 
@@ -259,6 +268,6 @@ function printResults() {
 
         col.appendChild(p);
     }
-
-    content.appendChild(col);
+    row.appendChild(col);
+    container.appendChild(row);
 }

@@ -42,7 +42,7 @@ document.getElementById("submit").addEventListener("click", function () {
         if (rb.checked) {
             selectedValue = rb.value;
             break;
-        }
+        } 
     }
     
     if(rightAnswers[i - 1] == selectedValue) {

@@ -27,6 +27,18 @@ header{
 #navButton {
     vertical-align: right;
     justify-content: space-between;
+    border: 2px solid #0352fc;
+    min-width: 100px;
+    margin-right: 1em;
+    color: blue;
+    font-weight: bold;
+    line-height: 0px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.bi-caret-down {
+    color: blue;
 }
 
 article{
@@ -98,4 +110,29 @@ h1,h2,h3,h4,h5{
 @font-face {
     font-family: perusteksti;
     src: url(suunnittelu/Comfortaa-Regular.ttf);
+  }
+
+
+  @media screen and (max-width: 400px) {
+    header h1 {
+        display: none;
+    }
+
+    header img {
+        margin-left: 1rem;
+    }
+
+    .fa-home {
+        margin-left: 1rem;
+    }
+    
+
+  }
+  @media  screen and (max-width: 580px) {
+    footer img {
+        display: none;
+    }
+    #offcanvas {
+        min-width: 500px;
+    }
   }

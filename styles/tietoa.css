@@ -6,6 +6,25 @@ article a{
 a:hover{
     color: #9c1c23;
 }
-article{
-    padding: 0.3rem;
+article {
+    
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.container-fluid {
+    padding-bottom: 6.9rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 6.9rem;
+    width: 100%;
+    padding-left: 1em;
+    background-color: #A3EAFF;
+    border-top: solid #0352fc 4px;
 }
