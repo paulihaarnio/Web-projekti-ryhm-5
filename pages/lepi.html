@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 
   <title>Muksuvisa</title>
+
   <link rel="stylesheet" href="../styles/lepi.css">
   <link rel="stylesheet" href="../style.css">
   <script src="../js/lepi.js" defer></script>
@@ -60,7 +61,7 @@
     </div>
   </div>
 
-
+<div id="pagecontainer">
   <div class="container-fluid">
     <div class="row">
       <header>
@@ -84,56 +85,217 @@
           <a href="tietoa.html"><i class="fas fa-info fa-3x"></i></a>
         </div>
       </header>
-      <div class="row">
+      <span id="visaInfo">
         <h3>🎵Musavisa🎼</h3>
-      </div>
-      <span id="visaInfo">Musavisa sisältää kysymyksiä tunnetuista säveltäjistä, bändeistä ja
+        Musavisa sisältää kysymyksiä tunnetuista säveltäjistä, bändeistä ja
         soittimista.</span>
     </div>
   </div>
-  <div id="quizContainer" style="display: none; ">
-
-    <div class="row">
-      <h4 id="question">Mikä seuraavista soittimista ei ole kielisoitin</h4>
-    </div>
-
-    <div class="row">
-      <div class="col-1"  id="vastauslaatikko">
-        <label for="a">A)
-          <button type="button" class="btn btn-primary" id="vääräButton1" value="a">Kitara</button>
-          <span id="aAns"></span>
-        </label>
-      </div>
-      <div class="col-3"  id="vastauslaatikko">
-        <label for="b">B)
-          <button type="button" class="btn btn-primary" id="vääräButton2" value="b">Piano</button>
-          <span id="bAns"></span>
-        </label>
-      </div>
+  <div id="quizContainer"  style="visibility: hidden; margin-inline: 200px;">
+    <h3>🎵Musavisa🎼</h3>
+    <div id="kysymys1">
       <div class="row">
-        <div class="col-1"  id="vastauslaatikko">
-          <label for="c">C)
-           <button type="button" class="btn btn-primary" id="vääräButton3" value="c">Viulu</button>
-            <span id="cAns"></span>
+        <h4 id="question">Mikä seuraavista soittimista ei ole kielisoitin</h4>
+      </div>
+
+      <div class="row">
+        <div class="col-1" id="vastauslaatikko">
+          <label for="a">A)
+            <button type="button" class="btn btn-primary" id="vastausbutton1" onclick="correct()">Kitara</button>
           </label>
         </div>
         <div class="col-3" id="vastauslaatikko">
-          <label for="d">D)
-            <button type="button" class="btn btn-primary" id="oikeaButton" value="d">Saksofoni</button>
-            <span id="dAns"></span>
+          <label for="b">B)
+            <button type="button" class="btn btn-primary" id="vastausbutton2" onclick="correct()">Piano</button>
+          </label>
+        </div>
+        <div class="row">
+          <div class="col-1" id="vastauslaatikko">
+            <label for="c">C)
+              <button type="button" class="btn btn-primary" id="vastausbutton3" onclick="correct()">Viulu</button>
+            </label>
+          </div>
+          <div class="col-3" id="vastauslaatikko">
+            <label for="d">D)
+              <button type="button" class="btn btn-primary" id="vastausbutton4" onclick="Correct()">Saksofoni</button>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" id="next1" class="btn btn btn-primary">Seuraava kysymys</button>
+
+    </div>
+
+
+    <div id="kysymys2" style="display: none; ">
+      <div class="row">
+        <h4 id="question">Kuka tunnettu suomalainen säveltäjä on kuvassa</h4>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="../kuvat/sibelius.jpg" style="justify-content: center; width: auto; height: 400px; margin-bottom: 20px;">
+        </div>
+
+      
+      <div class="col">
+      <div class="row">
+        <div class="col-7" id="vastauslaatikko">
+          <label for="a">A)
+            <button type="button" class="btn btn-primary" id="vastausbutton5" onclick="correct()">Wolfgang Amadeus
+              Mozart</button>
+          </label>
+        </div>
+<div class="row">
+        <div class="col-7" id="vastauslaatikko">
+          <label for="b">B)
+            <button type="button" class="btn btn-primary" id="vastausbutton6" onclick="correct()">Johann Sebastian
+              Bach</button>
           </label>
         </div>
       </div>
+
+        <div class="row">
+          <div class="col-7" id="vastauslaatikko">
+            <label for="c">C)
+              <button type="button" class="btn btn-primary" id="vastausbutton7" onclick="correct()">Antonio
+                Vivaldi</button>
+            </label>
+          </div>
+        </div>
+          <div class="col-7" id="vastauslaatikko">
+            <label for="d">D)
+              <button type="button" class="btn btn-primary" id="vastausbutton8" onclick="Correct()">Jean
+                Sibelius</button>
+            </label>
+          </div>
+        
+      </div>
     </div>
+  </div>
+
+
+
+      <div class="row">
+        <div class="col">
+          <button type="button" id="next2" class="btn btn btn-primary">Seuraava
+            kysymys</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="kysymys3" style="display: none; ">
+      <div class="row">
+        <h4 id="question">kysymys3</h4>
+      </div>
+      <div class="row">
+        <div class="col-1" id="vastauslaatikko">
+          <label for="a">A)
+            <button type="button" class="btn btn-primary" id="vastausbutton5" onclick="correct()">1</button>
+          </label>
+        </div>
+        <div class="col-3" id="vastauslaatikko">
+          <label for="b">B)
+            <button type="button" class="btn btn-primary" id="vastausbutton6" onclick="correct()">2</button>
+          </label>
+        </div>
+        <div class="row">
+          <div class="col-1" id="vastauslaatikko">
+            <label for="c">C)
+              <button type="button" class="btn btn-primary" id="vastausbutton7" onclick="correct()">3</button>
+            </label>
+          </div>
+          <div class="col-3" id="vastauslaatikko">
+            <label for="d">D)
+              <button type="button" class="btn btn-primary" id="vastausbutton8" onclick="Correct()">4</button>
+            </label>
+          </div>
+        </div>
+      </div>
+      <button type="button" id="next3" class="btn btn btn-primary">Seuraava kysymys</button>
+    </div>
+
+
+    <div id="kysymys4" style="display: none; ">
+      <div class="row">
+        <h4 id="question">kysymys4</h4>
+      </div>
+      <div class="row">
+        <div class="col-1" id="vastauslaatikko">
+          <label for="a">A)
+            <button type="button" class="btn btn-primary" id="vastausbutton5" onclick="correct()">1</button>
+          </label>
+        </div>
+        <div class="col-3" id="vastauslaatikko">
+          <label for="b">B)
+            <button type="button" class="btn btn-primary" id="vastausbutton6" onclick="correct()">2</button>
+          </label>
+        </div>
+        <div class="row">
+          <div class="col-1" id="vastauslaatikko">
+            <label for="c">C)
+              <button type="button" class="btn btn-primary" id="vastausbutton7" onclick="correct()">3</button>
+            </label>
+          </div>
+          <div class="col-3" id="vastauslaatikko">
+            <label for="d">D)
+              <button type="button" class="btn btn-primary" id="vastausbutton8" onclick="Correct()">4</button>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="nextQ">
+        <button type="button" id="next4" class="btn btn btn-primary">Seuraava kysymys</button>
+      </div>
+
+    </div>
+
+    <div id="kysymys5" style="display: none; ">
+      <div class="row">
+        <h4 id="question">kysymys5</h4>
+      </div>
+      <div class="row">
+        <div class="col-1" id="vastauslaatikko">
+          <label for="a">A)
+            <button type="button" class="btn btn-primary" id="vastausbutton5" onclick="correct()">1</button>
+          </label>
+        </div>
+        <div class="col-3" id="vastauslaatikko">
+          <label for="b">B)
+            <button type="button" class="btn btn-primary" id="vastausbutton6" onclick="correct()">2</button>
+          </label>
+        </div>
+        <div class="row">
+          <div class="col-1" id="vastauslaatikko">
+            <label for="c">C)
+              <button type="button" class="btn btn-primary" id="vastausbutton7" onclick="correct()">3</button>
+            </label>
+          </div>
+          <div class="col-3" id="vastauslaatikko">
+            <label for="d">D)
+              <button type="button" class="btn btn-primary" id="vastausbutton8" onclick="Correct()">4</button>
+            </label>
+          </div>
+        </div>
+      </div>
+      <button type="button" id="next5" class="btn btn btn-primary">Seuraava kysymys</button>
+    </div>
+
+    <div class="row">
+    <div id="score">Pisteet: </div>
+    <div id="rightWrong"></div>
+  </div>
   </div>
   <button type="button" id="start" class="button">Aloita tehtävät</button>
   </div>
-  <footer class="footer fixed-bottom">
+  <footer class="footer mt-auto">
     <img src="../kuvat/logo.png" alt="" id="logo2">
     <p>Copyright Muksuvisa corporation©</p>
-    <p>Contact: Creator of Musavisa™ Chief academic officer Topias Leppäkoski 050 411 2055 <br>Muksu teaching solutions since 2021</p>
-    
+    <p>Contact: Creator of Musavisa™ Chief academic officer Topias Leppäkoski 050 411 2055 <br>Muksu teaching solutions
+      since 2021</p>
+
   </footer>
+</div>
 </body>
 
 </html>

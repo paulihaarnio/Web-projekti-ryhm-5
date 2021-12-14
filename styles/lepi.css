@@ -1,10 +1,34 @@
+
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+.container-fluid {
+    padding-bottom: 10px;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    height: 6.9rem;
+    width: 100%;
+    padding-left: 1em;
+    background-color: #A3EAFF;
+    border-top: solid #0352fc 4px;
+}
+
+
+
 #quizContainer{
     background-color: #FFB8A3;
-    border: solid black 1px;
+    border: solid black 5px;
     border-radius: 5px;
-    padding: 50px;
+    padding: 30px;
     
 }
 #vastauslaatikko{
     padding-top: 20px;
 }
+

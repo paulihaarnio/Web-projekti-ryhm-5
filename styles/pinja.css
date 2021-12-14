@@ -6,7 +6,7 @@ html body {
 #page-container {
     position: relative;
     min-height: 100vh;
-  }
+}
 
 .container-fluid {
     padding-bottom: 6.9rem;
@@ -28,12 +28,16 @@ html body {
     border-radius: 5px;
     padding: 10px;
     padding-left: 20px;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 #question, p {
     margin-bottom: 10px;
     margin-left: 5px;
+    font-family: perusteksti;
 }
 
 label {
@@ -52,3 +56,18 @@ label {
 span {
     display: inline-block;
 }
+
+#points {
+    padding: 5px;
+    margin-bottom: 20px;
+    align-content: flex-end;
+}
+
+h2, .text {
+    text-align: center;
+}
+
+@font-face {
+    font-family: perusteksti;
+    src: url(suunnittelu/Comfortaa-Regular.ttf);
+  }
