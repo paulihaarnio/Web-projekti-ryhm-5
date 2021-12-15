@@ -126,7 +126,7 @@ questions[1].setAnswers(answers1);
 questions[1].setCorrectAnswer("Karhut ovat laumaeläimiä");
 questions[1].setExplanation("Karhut ovat yksineläjiä, ne eivät siis kulje laumassa");
 
-questions[2] = new Question("Mikä petoeläin on kuvassa", "../kuvat/kärppä.jpg");
+questions[2] = new Question("Mikä petoeläin on kuvassa?", "../kuvat/kärppä.jpg");
 let answers2 = [];
 answers2[0] = "Kärppä";
 answers2[1] = "Lumikko";
