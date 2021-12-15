@@ -6,6 +6,11 @@
     background-color: aliceblue;
 }
 
+#progressbar {
+    text-align: right;
+    padding-right: 10px;
+}
+
 #question {
     margin-top: 10px;
 }
