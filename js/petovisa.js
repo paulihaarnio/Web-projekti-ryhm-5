@@ -186,6 +186,32 @@ function submitAnswer() {
 
     submitButton.setAttribute("disabled", "");
     nextButton.removeAttribute("disabled", "");
+
+    let progressbar = document.getElementById("progressbar");
+    let progressValue = printedQuestion + 1;
+
+    progressbar.setAttribute("aria-valuenow", progressValue);
+    progressbar.innerHTML = progressValue;
+    
+    switch(progressValue) {
+        case 1:
+            progressbar.setAttribute("style", "width: 20%; text-align: right;");
+            break;
+        case 2:
+            progressbar.setAttribute("style", "width: 40%; text-align: right;")
+            break;
+        case 3:
+            progressbar.setAttribute("style", "width: 60%; text-align: right;");
+            break;
+        case 4:
+            progressbar.setAttribute("style", "width: 80%; text-align: right;");
+            break;
+        case 5:
+            progressbar.setAttribute("style", "width: 100%; text-align: right;");
+            break;
+        default:
+            progressbar.setAttribute("style", "width: 0; text-align: right;");
+    }
 }
 
 function nextQuestion() {
