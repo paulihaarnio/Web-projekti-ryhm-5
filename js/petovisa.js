@@ -126,7 +126,7 @@ questions[1].setAnswers(answers1);
 questions[1].setCorrectAnswer("Karhut ovat laumaeläimiä");
 questions[1].setExplanation("Karhut ovat yksineläjiä, ne eivät siis kulje laumassa");
 
-questions[2] = new Question("Mikä petoeläin on kuvassa", "../kuvat/kärppä.jpg");
+questions[2] = new Question("Mikä petoeläin on kuvassa?", "../kuvat/kärppä.jpg");
 let answers2 = [];
 answers2[0] = "Kärppä";
 answers2[1] = "Lumikko";
@@ -186,6 +186,32 @@ function submitAnswer() {
 
     submitButton.setAttribute("disabled", "");
     nextButton.removeAttribute("disabled", "");
+
+    let progressbar = document.getElementById("progressbar");
+    let progressValue = printedQuestion + 1;
+
+    progressbar.setAttribute("aria-valuenow", progressValue);
+    progressbar.innerHTML = progressValue;
+    
+    switch(progressValue) {
+        case 1:
+            progressbar.setAttribute("style", "width: 20%; text-align: right;");
+            break;
+        case 2:
+            progressbar.setAttribute("style", "width: 40%; text-align: right;")
+            break;
+        case 3:
+            progressbar.setAttribute("style", "width: 60%; text-align: right;");
+            break;
+        case 4:
+            progressbar.setAttribute("style", "width: 80%; text-align: right;");
+            break;
+        case 5:
+            progressbar.setAttribute("style", "width: 100%; text-align: right;");
+            break;
+        default:
+            progressbar.setAttribute("style", "width: 0; text-align: right;");
+    }
 }
 
 function nextQuestion() {
