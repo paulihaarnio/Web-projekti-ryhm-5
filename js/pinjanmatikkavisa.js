@@ -1,3 +1,5 @@
+// Pinja Åman
+
 let quiz = document.getElementById("question");
 let result = document.getElementById("result");
 let aAnswer = document.getElementById("aAns");
@@ -11,25 +13,36 @@ let answeredQuestions = 0;
 let correctAnswers = 0;
 let answered = false;
 
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  };
+let number1 = getRndInteger(5, 10)*10;
+let number2 = getRndInteger(1, 10)*10*4;
+let number3 = getRndInteger(2, 6);
+let number4 = getRndInteger(1, 3);
+let answer1 = (number1 / 2) - 10;
+let answer2 = (number2 / 4);
+let answer3 = (number3) * 400;
+let answer4 = (number4*3 + number4 + 0.50 + number4/10);
 
 let questions = [
-    "1. Annalla on 50 omenaa, hän antaa niistä puolet Villelle ja vielä 10 Sannille. <br> Kuinka monta omenaa Annalla nyt on?", 
-    "2. Äiti on ostanut lapsille karkkipussin. Pussissa on yhteensä 120 karkkia. <br> Kuinka monta karkkia kukin neljästä (4) lapsesta saa, jos karkit jaetaan tasan?",
-    "3. Urheilukentän juoksuradan pituus on 400 metriä, kuinka pitkän matkan olet juossut, jos kierrät radan 6 kertaa?", 
-    "4. Enni ostaa kaupasta lelun, joka maksaa 9 euroa, jäätelön, joka maksaa 2,50 euroa sekä tikkarin, joka maksaa 0,40 euroa. Kuinka paljon Ennin ostokset maksavat yhteensä?", 
+    "1. Annalla on " + number1 + " omenaa, hän antaa niistä puolet Villelle ja vielä 10 Sannille. <br> Kuinka monta omenaa Annalla nyt on?", 
+    "2. Äiti on ostanut lapsille karkkipussin. Pussissa on yhteensä " + number2 +" karkkia. <br> Kuinka monta karkkia kukin neljästä (4) lapsesta saa, jos karkit jaetaan tasan?",
+    "3. Urheilukentän juoksuradan pituus on 400 metriä, kuinka pitkän matkan olet juossut, jos kierrät radan " + number3 + " kertaa?", 
+    "4. Enni ostaa kaupasta lelun, joka maksaa " + number4*3 + " euroa, jäätelön, joka maksaa " + number4 +".50 euroa sekä tikkarin, joka maksaa " + Number(number4/10).toFixed(2) + " euroa. Kuinka paljon Ennin ostokset maksavat yhteensä?", 
     "5. Lotalla on lemmikkinä koira, kissa, hamsteri, käärme ja papukaija. <br> Kuinka monta jalkaa lemmikeillä on yhteensä?"
 ];
 
 let allAnswers = [];
-let question1Answers = [15, 20, 25, 30];
-let question2Answers = [20, 30, 35, 40];
-let question3Answers = ["2400 metriä", "2600 metriä", "2800 metriä", "3200 metriä"];
-let question4Answers = ["11,50€", "11,70€", "11,90€", "12,00€"];
+let question1Answers = [answer1, answer1 + 10, answer1 - 5, answer1 + 5];
+let question2Answers = [answer2 + 10, answer2, answer2 - 5, answer2 + 5];
+let question3Answers = [answer3 + 100, answer3 + 200, answer3 - 100, answer3];
+let question4Answers = [Number(answer4 + 0.5).toFixed(2) + "€", Number(answer4 + 0.2).toFixed(2) + "€", Number(answer4).toFixed(2) + "€", Number(answer4 - 0.5).toFixed(2) + "€"];
 let question5Answers = [12, 13, 14, 16];
 allAnswers.push(question1Answers, question2Answers, question3Answers, question4Answers, question5Answers);
 
-let rightAnswers = ["a", "b", "a", "c", "c"];
-let rightIndexes = [0, 1, 0, 2, 2]
+let rightAnswers = ["a", "b", "d", "c", "c"];
+let rightIndexes = [0, 1, 3, 2, 2]
 
 
 /* tehtävän tarkistus "tarkista"-nappia painettaessa. Muuttujaan

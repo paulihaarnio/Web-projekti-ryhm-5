@@ -45,16 +45,16 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-truncate">
+          <a href="Riku.html" class="nav-link text-truncate">
             <span class="ms-1 d-none d-sm-inline">Maantieto</span>
           </a>
         </li>
         <li>
-          <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
+          <a href="petovisa.html" class="nav-link text-truncate">
             <span class="ms-1 d-none d-sm-inline">Petoeläin-visa</span> </a>
         </li>
         <li>
-          <a href="#" class="nav-link text-truncate">
+          <a href="lepi.html" class="nav-link text-truncate">
             <span class="ms-1 d-none d-sm-inline">Musavisa</span></a>
         </li>
       </ul>
@@ -85,56 +85,67 @@
           <a href="tietoa.html"><i class="fas fa-info fa-3x"></i></a>
         </div>
       </header>
+      <div id="vinfo" class="vinfo">
       <span id="visaInfo">
         <h3>🎵Musavisa🎼</h3>
+        <img src="../kuvat/snoopdog.gif"><div class="row">
         Musavisa sisältää kysymyksiä tunnetuista säveltäjistä, bändeistä ja
-        soittimista.</span>
+        soittimista.</div><button type="button" id="start" class="btn btn-primary">Aloita tehtävät</button>
+     </span></div>
     </div>
   </div>
-  <div id="quizContainer"  style="visibility: hidden; margin-inline: 200px;">
+  <div id="quizContainer"  style="display: none; margin-inline: 200px;">
     <h3>🎵Musavisa🎼</h3>
     <div id="kysymys1">
       <div class="row">
-        <h4 id="question">Mikä seuraavista soittimista ei ole kielisoitin</h4>
+        <h4 id="question">1. Minkä kuuluisan rockyhtyeen jäsenet ovat kuvassa?</h4>
       </div>
-
+<div class="row">
+  <div class="col">
+        <img src="../kuvat/The_Fabs.JPG" style="justify-content: center; width: auto; height: 300px; margin-bottom: 20px;">
+      </div>
+      
+      
+<div class="col">
       <div class="row">
-        <div class="col-1" id="vastauslaatikko">
+        <div class="col-7" id="vastauslaatikko">
           <label for="a">A)
-            <button type="button" class="btn btn-primary" id="vastausbutton1" onclick="correct()">Kitara</button>
+            <button type="button" class="btn btn-primary" id="vastausbutton1" onclick="correct()">Hurriganes</button>
           </label>
         </div>
-        <div class="col-3" id="vastauslaatikko">
+        <div class="col-7" id="vastauslaatikko">
           <label for="b">B)
-            <button type="button" class="btn btn-primary" id="vastausbutton2" onclick="correct()">Piano</button>
+            <button type="button" class="btn btn-primary" id="vastausbutton2" onclick="correct()">The Doors</button>
           </label>
         </div>
         <div class="row">
-          <div class="col-1" id="vastauslaatikko">
+          <div class="col-7" id="vastauslaatikko">
             <label for="c">C)
-              <button type="button" class="btn btn-primary" id="vastausbutton3" onclick="correct()">Viulu</button>
+              <button type="button" class="btn btn-primary" id="vastausbutton3" onclick="correct()">Led Zeppelin</button>
             </label>
           </div>
-          <div class="col-3" id="vastauslaatikko">
+          <div class="col-7" id="vastauslaatikko">
             <label for="d">D)
-              <button type="button" class="btn btn-primary" id="vastausbutton4" onclick="Correct()">Saksofoni</button>
+              <button type="button" class="btn btn-primary" id="vastausbutton4" onclick="Correct()">The Beatles</button>
             </label>
           </div>
         </div>
       </div>
-
-      <button type="button" id="next1" class="btn btn btn-primary">Seuraava kysymys</button>
-
     </div>
+  </div>
+      <button type="button" id="next1" class="btn btn btn-primary">Seuraava kysymys</button>
+    </div>
+
+<!-- Kysymys2 -->
 
 
     <div id="kysymys2" style="display: none; ">
       <div class="row">
-        <h4 id="question">Kuka tunnettu suomalainen säveltäjä on kuvassa</h4>
+        <h4 id="question">2. Kuka tunnettu suomalainen säveltäjä on kuvassa?</h4>
       </div>
       <div class="row">
         <div class="col">
-          <img src="../kuvat/sibelius.jpg" style="justify-content: center; width: auto; height: 400px; margin-bottom: 20px;">
+          <img src="../kuvat/sibelius.jpg" style="justify-content: center; width: auto; height: 300px; margin-bottom: 20px;">
         </div>
 
       
@@ -173,9 +184,6 @@
       </div>
     </div>
   </div>
-
-
-
       <div class="row">
         <div class="col">
           <button type="button" id="next2" class="btn btn btn-primary">Seuraava
@@ -184,109 +192,187 @@
       </div>
     </div>
 
+
+    <!-- Kysymys3 -->
+
+
     <div id="kysymys3" style="display: none; ">
       <div class="row">
-        <h4 id="question">kysymys3</h4>
+        <h4 id="question">3. Mikä soitin on kuvassa?</h4>
       </div>
       <div class="row">
-        <div class="col-1" id="vastauslaatikko">
+        <div class="col">
+          <img src="../kuvat/viulu.jpg" style="justify-content: center; width: auto; height: 300px; margin-bottom: 20px;">
+        </div>
+
+      
+      <div class="col">
+      <div class="row">
+        <div class="col-7" id="vastauslaatikko">
           <label for="a">A)
-            <button type="button" class="btn btn-primary" id="vastausbutton5" onclick="correct()">1</button>
+            <button type="button" class="btn btn-primary" id="vastausbutton9" onclick="Correct()">Viulu</button>
           </label>
         </div>
-        <div class="col-3" id="vastauslaatikko">
+<div class="row">
+        <div class="col-7" id="vastauslaatikko">
           <label for="b">B)
-            <button type="button" class="btn btn-primary" id="vastausbutton6" onclick="correct()">2</button>
+            <button type="button" class="btn btn-primary" id="vastausbutton10" onclick="correct()">Basso</button>
           </label>
-        </div>
-        <div class="row">
-          <div class="col-1" id="vastauslaatikko">
-            <label for="c">C)
-              <button type="button" class="btn btn-primary" id="vastausbutton7" onclick="correct()">3</button>
-            </label>
-          </div>
-          <div class="col-3" id="vastauslaatikko">
-            <label for="d">D)
-              <button type="button" class="btn btn-primary" id="vastausbutton8" onclick="Correct()">4</button>
-            </label>
-          </div>
         </div>
       </div>
-      <button type="button" id="next3" class="btn btn btn-primary">Seuraava kysymys</button>
+
+        <div class="row">
+          <div class="col-7" id="vastauslaatikko">
+            <label for="c">C)
+              <button type="button" class="btn btn-primary" id="vastausbutton11" onclick="correct()">Piano</button>
+            </label>
+          </div>
+        </div>
+          <div class="col-7" id="vastauslaatikko">
+            <label for="d">D)
+              <button type="button" class="btn btn-primary" id="vastausbutton12" onclick="correct()">Cello</button>
+            </label>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" id="next3" class="btn btn btn-primary">Seuraava
+            kysymys</button>
+        </div>
+      </div>
+    </div>
+<!-- Kysymys4 -->
+
+
+<div id="kysymys4" style="display: none; ">
+  <div class="row">
+    <h4 id="question">4. Kuka venäläinen säveltäjä on tunnettu teoksistaan Joutsenlampi ja Pähkinänsärkijä?</h4>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img src="../kuvat/tchaikovsky.jpg" style="justify-content: center; width: auto; height: 300px; margin-bottom: 20px;">
     </div>
 
-
-    <div id="kysymys4" style="display: none; ">
-      <div class="row">
-        <h4 id="question">kysymys4</h4>
-      </div>
-      <div class="row">
-        <div class="col-1" id="vastauslaatikko">
-          <label for="a">A)
-            <button type="button" class="btn btn-primary" id="vastausbutton5" onclick="correct()">1</button>
-          </label>
-        </div>
-        <div class="col-3" id="vastauslaatikko">
-          <label for="b">B)
-            <button type="button" class="btn btn-primary" id="vastausbutton6" onclick="correct()">2</button>
-          </label>
-        </div>
-        <div class="row">
-          <div class="col-1" id="vastauslaatikko">
-            <label for="c">C)
-              <button type="button" class="btn btn-primary" id="vastausbutton7" onclick="correct()">3</button>
-            </label>
-          </div>
-          <div class="col-3" id="vastauslaatikko">
-            <label for="d">D)
-              <button type="button" class="btn btn-primary" id="vastausbutton8" onclick="Correct()">4</button>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="nextQ">
-        <button type="button" id="next4" class="btn btn btn-primary">Seuraava kysymys</button>
-      </div>
-
+  
+  <div class="col">
+  <div class="row">
+    <div class="col-7" id="vastauslaatikko">
+      <label for="a">A)
+        <button type="button" class="btn btn-primary" id="vastausbutton13" onclick="correct()">Franz Liszt</button>
+      </label>
     </div>
-
-    <div id="kysymys5" style="display: none; ">
-      <div class="row">
-        <h4 id="question">kysymys5</h4>
-      </div>
-      <div class="row">
-        <div class="col-1" id="vastauslaatikko">
-          <label for="a">A)
-            <button type="button" class="btn btn-primary" id="vastausbutton5" onclick="correct()">1</button>
-          </label>
-        </div>
-        <div class="col-3" id="vastauslaatikko">
-          <label for="b">B)
-            <button type="button" class="btn btn-primary" id="vastausbutton6" onclick="correct()">2</button>
-          </label>
-        </div>
-        <div class="row">
-          <div class="col-1" id="vastauslaatikko">
-            <label for="c">C)
-              <button type="button" class="btn btn-primary" id="vastausbutton7" onclick="correct()">3</button>
-            </label>
-          </div>
-          <div class="col-3" id="vastauslaatikko">
-            <label for="d">D)
-              <button type="button" class="btn btn-primary" id="vastausbutton8" onclick="Correct()">4</button>
-            </label>
-          </div>
-        </div>
-      </div>
-      <button type="button" id="next5" class="btn btn btn-primary">Seuraava kysymys</button>
+<div class="row">
+    <div class="col-7" id="vastauslaatikko">
+      <label for="b">B)
+        <button type="button" class="btn btn-primary" id="vastausbutton14" onclick="correct()">Niccolò Paganini</button>
+      </label>
     </div>
+  </div>
 
     <div class="row">
-    <div id="score">Pisteet: </div>
-    <div id="rightWrong"></div>
+      <div class="col-7" id="vastauslaatikko">
+        <label for="c">C)
+          <button type="button" class="btn btn-primary" id="vastausbutton15" onclick="Correct()">Pyotr Ilyich Tchaikovsky</button>
+        </label>
+      </div>
+    </div>
+      <div class="col-7" id="vastauslaatikko">
+        <label for="d">D)
+          <button type="button" class="btn btn-primary" id="vastausbutton16" onclick="correct()">Ludwig van Beethoven</button>
+        </label>
+      </div>
+    
   </div>
+</div>
+</div>
+  <div class="row">
+    <div class="col">
+      <button type="button" id="next4" class="btn btn btn-primary">Seuraava
+        kysymys</button>
+    </div>
   </div>
-  <button type="button" id="start" class="button">Aloita tehtävät</button>
+</div>
+<!-- Kysymys5 -->
+
+
+
+<div id="kysymys5" style="display: none; ">
+  <div class="row">
+    <h4 id="question">5. Kuka seuraavista henkilöistä tunnetaan popin kuninkaana?</h4>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img src="../kuvat/kyssäri.jpg" style="justify-content: center; width: auto; height: 300px; margin-bottom: 20px;">
+    </div>
+
+  
+  <div class="col">
+  <div class="row">
+    <div class="col-7" id="vastauslaatikko">
+      <label for="a">A)
+        <button type="button" class="btn btn-primary" id="vastausbutton17" onclick="correct()">Prince</button>
+      </label>
+    </div>
+<div class="row">
+    <div class="col-7" id="vastauslaatikko">
+      <label for="b">B)
+        <button type="button" class="btn btn-primary" id="vastausbutton18" onclick="correct()">Justin Bieber</button>
+      </label>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col-7" id="vastauslaatikko">
+        <label for="c">C)
+          <button type="button" class="btn btn-primary" id="vastausbutton19" onclick="Correct()">Michael Jackson</button>
+        </label>
+      </div>
+    </div>
+      <div class="col-7" id="vastauslaatikko">
+        <label for="d">D)
+          <button type="button" class="btn btn-primary" id="vastausbutton20" onclick="correct()">Ed Sheeran</button>
+        </label>
+      </div>
+    
+  </div>
+</div>
+</div>
+  <div class="row">
+    <div class="col">
+      <button type="button" id="next5" class="btn btn btn-primary">Visan Lopetus</button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div id="rightWrong"></div>
+</div>
+
+<div id="palaute" style="display: none;">
+  <h5>Loistavaa! Sait kaikkiin kysymyksiin vastattua.</h5>
+<div class="row">
+  <img src="../kuvat/Treble_a.jpg"  style="justify-content: center; width: auto; height: 300px; margin-bottom: 20px;">
+  <div class="col">
+    <div id="palauteScore">  </div>
+  <div id="wAns1" style=" display: none; background-color: red;" >Vastasit väärin 1. kysymykseen, oikea vastaus oli The Beatles</div>
+  <div id="wAns2" style=" display: none; background-color: red;" >Vastasit väärin 2. kysymykseen, oikea vastaus oli Jean Sibelius</div>
+  <div id="wAns3" style=" display: none; background-color: red;" >Vastasit väärin 3. kysymykseen, oikea vastaus oli Viulu</div>
+  <div id="wAns4" style=" display: none; background-color: red;" >Vastasit väärin 4. kysymykseen, oikea vastaus oli Pyotr Ilyich Tchaikovsky</div>
+  <div id="wAns5" style=" display: none; background-color: red;" >Vastasit väärin 5. kysymykseen, oikea vastaus oli Michael Jackson</div>
+</div>
+</div>
+  
+  
+
+  <!-- <div id="wAns1" style=" display: none; background-color: red;" >Vastasit väärin 1. kysymykseen, oikea vastaus oli The Beatles</div>
+  <div id="wAns2" style=" display: none; background-color: red;" >Vastasit väärin 2. kysymykseen, oikea vastaus oli Jean Sibelius</div>
+  <div id="wAns3" style=" display: none; background-color: red;" >Vastasit väärin 3. kysymykseen, oikea vastaus oli Viulu</div>
+  <div id="wAns4" style=" display: none; background-color: red;" >Vastasit väärin 4. kysymykseen, oikea vastaus oli Pyotr Ilyich Tchaikovsky</div>
+  <div id="wAns5" style=" display: none; background-color: red;" >Vastasit väärin 5. kysymykseen, oikea vastaus oli Michael Jackson</div> -->
+</div>
+  </div>
   </div>
   <footer class="footer mt-auto">
     <img src="../kuvat/logo.png" alt="" id="logo2">
