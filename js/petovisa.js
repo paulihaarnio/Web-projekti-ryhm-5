@@ -1,17 +1,28 @@
 let printedQuestion = 0;
 
+/**
+ * @class Question for creating and printing quiz questions.
+ */
 class Question {
     question = "";
-    img = "";
-    answers = [];
-    correntResult = false;
-    correctAnswer = "";
-    explanation = "";
+    img = ""; //image url associated with the question
+    answers = []; //array of all the answering options given to the user
+    correctResult = false; //false or true based on whether the user answered correctly
+    correctAnswer = ""; //has to match one of the answers in answers array
+    explanation = ""; //optional explanation of the correct answer
 
+    /**
+     * Creates a new instance of Question.
+     * 
+     * @param {string} q question
+     * @param {*} img url for image source
+     */
     constructor(q, img) {
         this.question = q;
         this.img = img;
     }
+
+    //getters and setters
 
     getQuestion() {
         return this.question;
@@ -61,18 +72,25 @@ class Question {
         this.explanation = string;
     }
     
+
+    /**
+     * Prints the question to an html base.
+     */
     printQuestion() {
         let submitButton = document.getElementById("submit");
         let nextButton = document.getElementById("next");
 
+        //clear previous settings
         submitButton.removeAttribute("disabled", "");
         nextButton.setAttribute("disabled", "");
 
         document.getElementById("result").textContent = "";
 
+        //print the question
         document.getElementById("question").textContent = this.question;
         document.getElementById("questionImg").src = this.img;
 
+        //print the answering options in a random order
         let div = document.getElementById("answers");
         let labels = div.querySelectorAll("label");
 
@@ -86,6 +104,7 @@ class Question {
 
             let input = document.getElementById("answer" + (i+1));
 
+            //give the answers correct and incorrect classes
             if(shuffeledAnswers[i] == this.correctAnswer) {
                 input.classList.add("correct");
             }else {
@@ -95,6 +114,10 @@ class Question {
         }
     }
 
+    /**
+     * Makes an html element with the correct answer.
+     * @returns resulting paragraph
+     */
     printCorrectAnswer() {
         let p = document.createElement("p");
 
@@ -103,6 +126,9 @@ class Question {
         return p;
     }
 }
+
+
+//create question objects
 
 let questions = [];
 
@@ -156,19 +182,31 @@ questions[4].setAnswers(answers4);
 questions[4].setCorrectAnswer("Ne helpottavat lumen päällä kävelyä");
 questions[4].setExplanation("Ilveksen paino jakautuu leveällä tassulla laajemmalle alueelle, jolloin lumi ei upota sen tassun alla yhtä herkästi");
 
+//setup the first question
+
 document.querySelector("#submit").addEventListener("click", submitAnswer);
 document.querySelector("#next").addEventListener("click", nextQuestion);
 
 questions[0].printQuestion();
 
-
+/**
+ * Returns a random number between min and max.
+ * @author w3schools.com
+ * @param {number} min 
+ * @param {number} max 
+ * @returns 
+ */
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
-  }
+}
 
+/**
+ * Checks the submitted answer and reacts to the answer being   * submitted.
+ */
 function submitAnswer() {
     let answer = document.querySelector("input[name='answer']:checked");
 
+    //check whether the answer is correct
     if(answer.classList.contains("correct")) {
         let span = document.getElementById("result");
         span.innerHTML = "Oikein!";
@@ -181,12 +219,14 @@ function submitAnswer() {
         questions[printedQuestion].setCorrectResult(false);
     }
 
+    //disable submitting
     let submitButton = document.getElementById("submit");
     let nextButton = document.getElementById("next");
 
     submitButton.setAttribute("disabled", "");
     nextButton.removeAttribute("disabled", "");
 
+    //update progressbar
     let progressbar = document.getElementById("progressbar");
     let progressValue = printedQuestion + 1;
 
@@ -214,8 +254,12 @@ function submitAnswer() {
     }
 }
 
+/**
+ * Prints the next question or the results page if the last
+ * question has been printed.
+ */
 function nextQuestion() {
-    if(printedQuestion == 4) {
+    if(printedQuestion == 4) { //4 is the index of the last question
         printResults();
     }else {
         printedQuestion++;
@@ -224,11 +268,18 @@ function nextQuestion() {
     
 }
 
+/**
+ * Prints the users results
+ */
 function printResults() {
 
+    //empty the question base
     let div = document.getElementById("quiz");
 
     div.innerHTML = "";
+
+
+    //print the results
 
     let h2 = document.createElement("h2");
     h2.textContent = "Visa on ohi"
@@ -259,6 +310,7 @@ function printResults() {
 
     div.append(h2, h1, h22, button);
 
+    //print result breakdown per question
     let container = document.querySelector(".container");
 
     let row = document.createElement("div");
