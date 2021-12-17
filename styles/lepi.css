@@ -31,4 +31,10 @@
 #vastauslaatikko{
     padding-top: 20px;
 }
-
+.vinfo{
+    margin-bottom: 90px;
+    background-color: #FFB8A3;
+    border: solid black 5px;
+    border-radius: 5px;
+    padding: 30px;
+}
