@@ -1,3 +1,5 @@
+// Pinja Åman
+
 let quiz = document.getElementById("question");
 let result = document.getElementById("result");
 let aAnswer = document.getElementById("aAns");
@@ -22,8 +24,7 @@ let answer1 = (number1 / 2) - 10;
 let answer2 = (number2 / 4);
 let answer3 = (number3) * 400;
 let answer4 = (number4*3 + number4 + 0.50 + number4/10);
-console.log(number3);
-console.log(answer3);
+
 let questions = [
     "1. Annalla on " + number1 + " omenaa, hän antaa niistä puolet Villelle ja vielä 10 Sannille. <br> Kuinka monta omenaa Annalla nyt on?", 
     "2. Äiti on ostanut lapsille karkkipussin. Pussissa on yhteensä " + number2 +" karkkia. <br> Kuinka monta karkkia kukin neljästä (4) lapsesta saa, jos karkit jaetaan tasan?",
