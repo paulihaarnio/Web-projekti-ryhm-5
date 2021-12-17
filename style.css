@@ -3,6 +3,7 @@
     height: 100px;
     width: auto;
     padding: 10px;
+    display: inline;
 }
 
 #logo2 {
@@ -14,6 +15,7 @@
 
 h1 {
     margin-left: 20px;
+    display: inline;
 }
 
 header{
@@ -22,6 +24,15 @@ header{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    max-width: 100vw;
+}
+
+.row>* {
+    padding-right: 0px !important;
+}
+
+.container-fluid {
+    min-height: 82vh;
 }
 
 .fa-home {
@@ -70,11 +81,11 @@ article{
 }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     background-color: #65DCFF;
     border-top: solid #0352fc 4px;
-    height: 110px;
+    height: 112px;
     width: 100%;
     padding-left: 1em;
 }
