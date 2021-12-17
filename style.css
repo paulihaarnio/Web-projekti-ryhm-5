@@ -56,8 +56,8 @@ article{
 
 #offcanvas{
     background-color: #A3EAFF;
-    min-height: 150px;
-    width: 150px;
+    min-height: fit-content;
+    min-width: fit-content;
     border-radius: 5px;
     border: solid #0352fc 3px;
     margin-bottom: 10px;
@@ -66,7 +66,7 @@ article{
 }
 
 #offcanvas a {
-    width: 200px;
+    width: fit-content;
 }
 
 footer {
@@ -133,11 +133,15 @@ h1,h2,h3,h4,h5{
     
 
   }
-  @media  screen and (max-width: 580px) {
+  @media  screen and (max-width: 576px) {
     footer img {
         display: none;
     }
-    #offcanvas {
-        min-width: 500px;
+    #offcanvas{
+        min-width: 100vw;
+    }
+
+    .d-sm-inline {
+        display: inline !important;
     }
   }
