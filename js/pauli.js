@@ -1,9 +1,10 @@
+//Pauli Haarnio
 let counter=0
 document.getElementById("tasksDone").innerText=counter
 let counter2=0
 
 
-
+//Lisää satunnaiset numerot
 function addNumbers(){
     document.getElementById("one").innerHTML=Number(Math.floor(Math.random() * 40) + 1);
     document.getElementById("two").innerHTML=Number(Math.floor(Math.random() * 14) + 1);
@@ -13,7 +14,7 @@ function addNumbers(){
 }
 
 document.getElementById("numbers").addEventListener("click", addNumbers)
-
+//Tarkistaa onko vastaus oikein vai väärin ja ilmottaa jos et ole aloittanut peliä tai input kentät ovat tyhjinä
 function check(){
     let eka=Number(document.getElementById("one").innerHTML)
     let toka=Number(document.getElementById("two").innerHTML)
@@ -78,9 +79,9 @@ function check(){
 }
 }
 }
-
+//näyttää tulokset ja tulostaa tekstin suorituksen perusteella
 function results(){
-    document.getElementById("peli").style.fontSize = "2.7em";
+    document.getElementById("peli").style.fontSize = "1.6em";
     var peli=document.getElementById("peli")
     let uudelleen='<input type="button" value="Yritä uudelleen" onClick="refresh()" id=""refresh></input>'
 

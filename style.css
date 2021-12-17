@@ -120,6 +120,7 @@ h1,h2,h3,h4,h5{
     footer img {
         display: none;
     }
+    
     #offcanvas {
         min-width: 500px;
     }
