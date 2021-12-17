@@ -1,6 +1,3 @@
-//luo eventlistener joka merkkaa mitä nappia on painettu ja palaute sivulla kerrotaan mikä olisi ollut oikea
-//appendchildin avulla saa lisättyä palaute sivulle mitkä meni väärin ja mitkä oikein. niihin style red green yms.
-//eri kuva/gifi lopputuloksen mukaan.
 
 let quiz = document.getElementById("question");
 let info = document.getElementById('visaInfo');
