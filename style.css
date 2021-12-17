@@ -31,6 +31,10 @@ header{
     padding-right: 0px !important;
 }
 
+.container-fluid {
+    min-height: 82vh;
+}
+
 .fa-home {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -77,11 +81,11 @@ article{
 }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     background-color: #65DCFF;
     border-top: solid #0352fc 4px;
-    height: 110px;
+    height: 112px;
     width: 100%;
     padding-left: 1em;
 }
