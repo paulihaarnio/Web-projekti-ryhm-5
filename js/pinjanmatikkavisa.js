@@ -36,7 +36,7 @@ let questions = [
 let allAnswers = [];
 let question1Answers = [answer1, answer1 + 10, answer1 - 5, answer1 + 5];
 let question2Answers = [answer2 + 10, answer2, answer2 - 10, answer2 + 5];
-let question3Answers = [answer3 + 100, answer3 + 200, answer3 - 100, answer3];
+let question3Answers = [answer3 + 100 + " metriä", answer3 + 200 + " metriä", answer3 - 100 + " metriä", answer3 + " metriä"];
 let question4Answers = [Number(answer4 + 0.5).toFixed(2) + "€", Number(answer4 + 0.2).toFixed(2) + "€", Number(answer4).toFixed(2) + "€", Number(answer4 - 0.5).toFixed(2) + "€"];
 let question5Answers = [12, 13, 14, 16];
 allAnswers.push(question1Answers, question2Answers, question3Answers, question4Answers, question5Answers);
@@ -44,6 +44,28 @@ allAnswers.push(question1Answers, question2Answers, question3Answers, question4A
 let rightAnswers = ["a", "b", "d", "c", "c"];
 let rightIndexes = [0, 1, 3, 2, 2]
 
+
+//visan aloituspainike, ensimmäinen tehtävä tulee esiin kun nappia painaa. Vaihtuu kokeile uudestaan painikkeeksi visan päätteeksi
+document.getElementById("start").onclick = function() {
+    document.getElementById("allQuestions").innerHTML = 5;
+    document.getElementById("answeredQuestions").innerHTML = 0;
+    correctAnswers = 0;
+    answeredQuestions = 0;
+    document.getElementsByClassName('progress-bar').item(0).setAttribute('aria-valuenow', 0);
+    document.getElementsByClassName('progress-bar').item(0).setAttribute('style','width:'+ 0 +'%');
+    
+    i = 1;
+    document.getElementById("allDone").innerHTML = "";
+    document.getElementById("quizContainer").style.display = "block";
+    document.getElementById("start").style.display = "none";
+    quiz.innerHTML = questions[0];
+    aAnswer.innerHTML = allAnswers[0][0];
+    bAnswer.innerHTML = allAnswers[0][1];
+    cAnswer.innerHTML = allAnswers[0][2];
+    dAnswer.innerHTML = allAnswers[0][3];
+
+    document.getElementById("correct").innerHTML = 0;
+}
 
 /* tehtävän tarkistus "tarkista"-nappia painettaessa. Muuttujaan
  answered asetetaan arvo true kun nappia on painettu */
@@ -127,24 +149,3 @@ document.getElementById("nextQuestion").addEventListener("click", function() {
     answered = false;
 })
 
-//visan aloituspainike, ensimmäinen tehtävä tulee esiin kun nappia painaa. Vaihtuu kokeile uudestaan painikkeeksi visan päätteeksi
-document.getElementById("start").onclick = function() {
-    document.getElementById("allQuestions").innerHTML = 5;
-    document.getElementById("answeredQuestions").innerHTML = 0;
-    correctAnswers = 0;
-    answeredQuestions = 0;
-    document.getElementsByClassName('progress-bar').item(0).setAttribute('aria-valuenow', 0);
-    document.getElementsByClassName('progress-bar').item(0).setAttribute('style','width:'+ 0 +'%');
-    
-    i = 1;
-    document.getElementById("allDone").innerHTML = "";
-    document.getElementById("quizContainer").style.display = "block";
-    document.getElementById("start").style.display = "none";
-    quiz.innerHTML = questions[0];
-    aAnswer.innerHTML = allAnswers[0][0];
-    bAnswer.innerHTML = allAnswers[0][1];
-    cAnswer.innerHTML = allAnswers[0][2];
-    dAnswer.innerHTML = allAnswers[0][3];
-
-    document.getElementById("correct").innerHTML = 0;
-}
