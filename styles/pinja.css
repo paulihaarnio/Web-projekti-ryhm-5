@@ -1,3 +1,5 @@
+/* Pinja Åman */
+
 html body {
     background-color: #EAFFA3;
     width: 100%;
@@ -30,8 +32,8 @@ html body {
     padding-left: 20px;
     margin-top: 10px;
     margin-bottom: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 #question, p {

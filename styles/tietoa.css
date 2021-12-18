@@ -3,11 +3,8 @@ article a{
     color: black;
     display: inline;
 }
-a:hover{
+article a:hover{
     color: #9c1c23;
-}
-article{
-    padding: 0.3rem;
 }
 
 #page-container {

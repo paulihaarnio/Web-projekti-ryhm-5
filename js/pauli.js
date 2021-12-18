@@ -1,9 +1,10 @@
+//Pauli Haarnio
 let counter=0
 document.getElementById("tasksDone").innerText=counter
 let counter2=0
 
 
-
+//Lisää satunnaiset numerot
 function addNumbers(){
     document.getElementById("one").innerHTML=Number(Math.floor(Math.random() * 40) + 1);
     document.getElementById("two").innerHTML=Number(Math.floor(Math.random() * 14) + 1);
@@ -13,7 +14,7 @@ function addNumbers(){
 }
 
 document.getElementById("numbers").addEventListener("click", addNumbers)
-
+//Tarkistaa onko vastaus oikein vai väärin ja ilmottaa jos et ole aloittanut peliä tai input kentät ovat tyhjinä
 function check(){
     let eka=Number(document.getElementById("one").innerHTML)
     let toka=Number(document.getElementById("two").innerHTML)
@@ -26,7 +27,9 @@ function check(){
         document.getElementById("vastausKenttä").innerText="Paina aloita nappia"
     }else{
     if(vastaus==""){
-        document.getElementById("vastausKenttä").innerText="Syötä vastaus."}
+        document.getElementById("vastausKenttä").innerText="Syötä vastaus."
+        document.getElementById("vastausKenttä").style.color="black";
+    }
         else{
             if(counter==2||counter==3){
                 document.getElementById("merkki").innerText="-"
@@ -64,15 +67,26 @@ function check(){
         document.getElementById("vastausKenttä").style.color="red";
         counter=counter+1
         document.getElementById("tasksDone").innerText=counter
-    }}
+    }
+    
+    }
+    //Kun kaikkiin kysymyksiin on vastattu, tekstit häviävät
     if(counter==5){
+        document.getElementById("one").innerHTML=""
+        document.getElementById("two").innerHTML=""
+        document.getElementById("merkki").innerText=""
+        document.getElementById("howmuch").innerText=""
+        document.getElementById("equal").innerText=""
         showResult()
     }
+    document.getElementsByClassName("progress-bar").item(0).setAttribute("aria-valuenow",Number(counter*20))
+    document.getElementsByClassName("progress-bar").item(0).setAttribute("style","width:"+Number(counter*20)+"%" );
 }
 }
 }
+//näyttää tulokset ja tulostaa tekstin suorituksen perusteella
 function results(){
-    document.getElementById("peli").style.fontSize = "2.7em";
+    document.getElementById("peli").style.fontSize = "1.6em";
     var peli=document.getElementById("peli")
     let uudelleen='<input type="button" value="Yritä uudelleen" onClick="refresh()" id=""refresh></input>'
 

@@ -3,6 +3,7 @@
     height: 100px;
     width: auto;
     padding: 10px;
+    display: inline;
 }
 
 #logo2 {
@@ -14,6 +15,7 @@
 
 h1 {
     margin-left: 20px;
+    display: inline;
 }
 
 header{
@@ -22,11 +24,37 @@ header{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    max-width: 100vw;
+}
+
+.row>* {
+    padding-right: 0px !important;
+}
+
+.container-fluid {
+    min-height: 82vh;
+}
+
+.fa-home {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 #navButton {
     vertical-align: right;
     justify-content: space-between;
+    border: 2px solid #0352fc;
+    min-width: 100px;
+    margin-right: 1em;
+    color: blue;
+    font-weight: bold;
+    line-height: 0px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.bi-caret-down {
+    color: blue;
 }
 
 article{
@@ -39,8 +67,8 @@ article{
 
 #offcanvas{
     background-color: #A3EAFF;
-    min-height: 150px;
-    width: 150px;
+    min-height: fit-content;
+    min-width: fit-content;
     border-radius: 5px;
     border: solid #0352fc 3px;
     margin-bottom: 10px;
@@ -49,15 +77,15 @@ article{
 }
 
 #offcanvas a {
-    width: 200px;
+    width: fit-content;
 }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     background-color: #65DCFF;
     border-top: solid #0352fc 4px;
-    height: 110px;
+    height: 112px;
     width: 100%;
     padding-left: 1em;
 }
@@ -101,7 +129,7 @@ h1,h2,h3,h4,h5{
   }
 
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 470px) {
     header h1 {
         display: none;
     }
@@ -116,11 +144,15 @@ h1,h2,h3,h4,h5{
     
 
   }
-  @media  screen and (max-width: 580px) {
+  @media  screen and (max-width: 576px) {
     footer img {
         display: none;
     }
-    #offcanvas {
-        min-width: 500px;
+    #offcanvas{
+        min-width: 100vw;
+    }
+
+    .d-sm-inline {
+        display: inline !important;
     }
   }

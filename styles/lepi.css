@@ -6,7 +6,7 @@
   }
 
 .container-fluid {
-    padding-bottom: 10px;
+    padding-bottom: 6.9rem;
 }
 
 .footer {
@@ -17,18 +17,33 @@
     padding-left: 1em;
     background-color: #A3EAFF;
     border-top: solid #0352fc 4px;
+   
 }
-
+#dog{
+    justify-content: center;
+     width: auto;
+    height: 300px;
+    margin-bottom: 20px;
+}
 
 
 #quizContainer{
     background-color: #FFB8A3;
     border: solid black 5px;
     border-radius: 5px;
-    padding: 30px;
+    padding: 3rem;
     
 }
 #vastauslaatikko{
     padding-top: 20px;
 }
-
+.vinfo{
+    margin-bottom: 90px;
+    background-color: #FFB8A3;
+    border: solid black 5px;
+    border-radius: 5px;
+    padding: 30px;
+}
+@media screen and (max-width:430px) {
+    #dog{width: 150px; height: auto;}
+}
