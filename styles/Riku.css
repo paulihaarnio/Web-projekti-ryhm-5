@@ -203,4 +203,22 @@ button {
   #offcanvas{
     right: 50px;  
   }
+  .col-3 {
+  display: flex;
+  justify-content: space-evenly;
+ }
+ #navButton {
+   margin-right: 80px;
+   
+ }
+ #tietoaMerkki {
+   margin-bottom: 0px;
+   padding-top: 12px;
+ }
+ main {
+   margin-left: 2px;
+   margin-right: 2px;
+
+ }
+ 
 }
