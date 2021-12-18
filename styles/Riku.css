@@ -13,6 +13,7 @@ main {
     padding-top: 3%;
     padding-bottom: 3%;
     align-content: center;
+    
 }
 body { 
   background-color: rgb(204, 225, 231);
@@ -62,6 +63,7 @@ header{
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  
 }
 
 
@@ -131,7 +133,9 @@ header{
   float: right;
 
 }
-
+.col-3 {
+  float:right;
+}
 
 /* Fading animation */
 .fade {
