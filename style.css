@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(204, 225, 231);
+    font-family: perusteksti;
+}
 
 #logo {
     height: 100px;
@@ -108,9 +112,26 @@ a{
     width: 54px;
 }
 
-body{
-    background-color: rgb(204, 225, 231);
-    font-family: perusteksti;
+h3 {
+    padding: 10px;
+}
+
+#text{
+  font-size: 20px;
+  animation: an 1s ease-out 1 both;
+  padding: 10px;
+}
+
+/* animaation koodit kopioitu https://csshint.com/text-animations/ */
+@keyframes an{
+  from{
+      opacity: 0;
+      transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+  }
+  to{
+      opacity: 1;
+      transform: perspective(500px) translate3d(0, 0, 0);
+  }
 }
 
 #welcome{
@@ -156,3 +177,4 @@ h1,h2,h3,h4,h5{
         display: inline !important;
     }
   }
+
