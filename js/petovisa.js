@@ -132,7 +132,7 @@ class Question {
 
 let questions = [];
 
-questions[0] = new Question("Mikä petoeläin on kuvassa?", "../kuvat/ahma.jpg");
+questions[0] = new Question("Mikä petoeläin on kuvassa?", "../kuvat/ahma.jpg"); //lähde: Ninara https://www.flickr.com/photos/ninara/40931925062
 let answers0 = [];
 answers0[0] = "Ahma";
 answers0[1] = "Supikoira";
@@ -152,7 +152,7 @@ questions[1].setAnswers(answers1);
 questions[1].setCorrectAnswer("Karhut ovat laumaeläimiä");
 questions[1].setExplanation("Karhut ovat yksineläjiä, ne eivät siis kulje laumassa");
 
-questions[2] = new Question("Mikä petoeläin on kuvassa?", "../kuvat/kärppä.jpg");
+questions[2] = new Question("Mikä petoeläin on kuvassa?", "../kuvat/kärppä.jpg"); //lähde: hardi_630 https://www.flickr.com/photos/hardi_630/16169333530
 let answers2 = [];
 answers2[0] = "Kärppä";
 answers2[1] = "Lumikko";
