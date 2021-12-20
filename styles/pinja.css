@@ -53,6 +53,11 @@ label {
     border-radius: 5px;
 }
 
+#start {
+    width: 150px;
+    text-align: center;
+}
+
 span {
     display: inline-block;
 }
