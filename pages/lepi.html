@@ -83,13 +83,14 @@
           <a href="tietoa.html"><i class="fas fa-info fa-3x"></i></a>
         </div>
       </header>
-      <div id="vinfo" class="vinfo">
+      <div class="col">
+      <div id="vinfo" class="vinfo" style="margin-inline: 2rem;">
       <span id="visaInfo">
         <h3>🎵Musavisa🎼</h3>
-        <img src="../kuvat/snoopdog.gif"><div class="row">
+        <img id="dog" src="../kuvat/snoopdog.gif"><div class="row">
         Musavisa sisältää kysymyksiä tunnetuista säveltäjistä, bändeistä ja
         soittimista.</div><button type="button" id="start" class="btn btn-primary">Aloita tehtävät</button>
-     </span></div>
+     </span></div></div>
     </div>
   <div id="quizContainer"  style="display: none; margin-inline: 2rem;">
     <h3>🎵Musavisa🎼</h3>
@@ -130,7 +131,7 @@
       </div>
     </div>
   </div>
-      <button type="button" id="next1" class="btn btn btn-primary">Seuraava kysymys</button>
+      <button type="button" id="next1" style="margin-top: 10px;" class="btn btn btn-primary">Seuraava kysymys</button>
     </div>
 
 <!-- Kysymys2 -->
@@ -183,7 +184,7 @@
   </div>
       <div class="row">
         <div class="col">
-          <button type="button" id="next2" class="btn btn btn-primary">Seuraava
+          <button type="button" id="next2" style="margin-top: 10px;" class="btn btn btn-primary">Seuraava
             kysymys</button>
         </div>
       </div>
@@ -236,7 +237,7 @@
   </div>
       <div class="row">
         <div class="col">
-          <button type="button" id="next3" class="btn btn btn-primary">Seuraava
+          <button type="button" id="next3" style="margin-top: 10px;" class="btn btn btn-primary">Seuraava
             kysymys</button>
         </div>
       </div>
@@ -287,7 +288,7 @@
 </div>
   <div class="row">
     <div class="col">
-      <button type="button" id="next4" class="btn btn btn-primary">Seuraava
+      <button type="button" id="next4" style="margin-top: 10px;" class="btn btn btn-primary">Seuraava
         kysymys</button>
     </div>
   </div>
@@ -339,7 +340,7 @@
 </div>
   <div class="row">
     <div class="col">
-      <button type="button" id="next5" class="btn btn btn-primary">Visan Lopetus</button>
+      <button type="button" id="next5" style="margin-top: 10px;" class="btn btn btn-primary">Visan Lopetus</button>
     </div>
   </div>
 </div>
@@ -358,6 +359,7 @@
   <div id="wAns3" style=" display: none; background-color: red;" >Vastasit väärin 3. kysymykseen, oikea vastaus oli Viulu</div>
   <div id="wAns4" style=" display: none; background-color: red;" >Vastasit väärin 4. kysymykseen, oikea vastaus oli Pyotr Ilyich Tchaikovsky</div>
   <div id="wAns5" style=" display: none; background-color: red;" >Vastasit väärin 5. kysymykseen, oikea vastaus oli Michael Jackson</div>
+   <a class="btn btn-primary" style="margin-top: 30px; width: 150px;" href="../pages/lepi.html">Yritä uudelleen</a> 
 </div>
 </div>
   
@@ -371,7 +373,7 @@
 </div>
   </div>
 </div>
-  <footer class="footer ms-auto">
+  <footer class="footer mt-auto">
     <img src="../kuvat/logo.png" alt="" id="logo2">
     <p>Topias Leppäkoski</p>
     <p>Muksuvisa</p>

@@ -37,6 +37,7 @@ header{
 
 .container-fluid {
     min-height: 82vh;
+    padding-bottom: 11rem;
 }
 
 .fa-home {
@@ -89,7 +90,7 @@ footer {
     bottom: 0;
     background-color: #65DCFF;
     border-top: solid #0352fc 4px;
-    height: 112px;
+    height: 11rem;
     width: 100%;
     padding-left: 1em;
 }
