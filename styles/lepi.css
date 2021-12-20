@@ -6,22 +6,18 @@
   }
 
 .container-fluid {
-    padding-bottom: 6.9rem;
+    padding-bottom: 11rem;
 }
 
 .footer {
     position: relative;
     bottom: 0;
-    height: 6.9rem;
-    width: 100%;
-    padding-left: 1em;
-    background-color: #A3EAFF;
-    border-top: solid #0352fc 4px;
-   
+    height: 11rem;
+    width: 100vw;
 }
 #dog{
     justify-content: center;
-     width: auto;
+    width: auto;
     height: 300px;
     margin-bottom: 20px;
 }
@@ -38,11 +34,11 @@
     padding-top: 20px;
 }
 .vinfo{
-    margin-bottom: 90px;
     background-color: #FFB8A3;
     border: solid black 5px;
     border-radius: 5px;
     padding: 30px;
+    
 }
 @media screen and (max-width:430px) {
     #dog{width: 150px; height: auto;}
