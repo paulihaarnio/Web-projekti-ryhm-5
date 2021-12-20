@@ -1,3 +1,4 @@
+//Topias Leppäkoski
 
 let quiz = document.getElementById("question");
 let info = document.getElementById('visaInfo');
@@ -38,6 +39,7 @@ function Correct() {
     console.log(score)
     score = score + 1
     document.getElementById('palauteScore').innerHTML = "Vastasit oikein yhteensä " + score + " kysymykseen";
+    //lukitsee vastaukset nappia painettaessa
     btnLock();
     return;
 
@@ -46,6 +48,7 @@ function correct() {
     rightWrong.innerHTML = "<span style='background-color: red;'>Väärin meni, siirry seuraavaan kysymykseen.</span>";
     console.log(score)
     document.getElementById('palauteScore').innerHTML = "Vastasit oikein yhteensä " + score + " kysymykseen";
+    //lukitsee vastaukset nappia painettaessa
     btnLock();
     return;
 }
@@ -60,6 +63,7 @@ document.getElementById("start").onclick = function () {
 
 
 //seuraava kysymysnappi, nappia painettaessa edellinen kysymys menee piiloon ja uusi tulee esiin.
+//Avaa buttonit seuraavaan kysymykseen siirryttäessä
 
 document.getElementById('next1').onclick = function () {
     rightWrong.innerHTML = "";
@@ -90,6 +94,7 @@ document.getElementById('next5').onclick = function () {
     rightWrong.innerHTML = "";
     document.getElementById('kysymys5').style.display = "none";
     document.getElementById('palaute').style.display = "block";
+    
     btnUnLock()
 }
 
@@ -123,6 +128,8 @@ document.getElementById("vastausbutton17").addEventListener("click", function ()
 document.getElementById("vastausbutton18").addEventListener("click", function () { wa5.style.display = "block"; })
 document.getElementById("vastausbutton20").addEventListener("click", function () { wa5.style.display = "block"; })
 
+
+//Locks buttons
 function btnLock() {
     b1.setAttribute("disabled", "")
     b2.setAttribute("disabled", "")
@@ -145,6 +152,7 @@ function btnLock() {
     b19.setAttribute("disabled", "")
     b20.setAttribute("disabled", "")
 }
+//Unlocks buttons
 function btnUnLock() {
     b1.removeAttribute("disabled", "")
     b2.removeAttribute("disabled", "")

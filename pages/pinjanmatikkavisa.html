@@ -77,13 +77,19 @@
         </div>
         <div class="row"><h2>Matikka 2</h2></div>
         
+        <!-- Start screen and "aloita" button -->
         <div class="text">
           <span id="allDone"> Matikka 2 -osio sisältää plus-, miinus-, kerto- ja jakolaskuja.<br> Paina nappia aloittaaksesi tehtävät</span>
         </div>
+        <div class="row d-flex justify-content-center">
+          <button type="button" id="start" class="button">Aloita tehtävät</button>
+        </div>
+
+        <!-- Quiz container for questions, answers and buttons -->
         <div id="quizContainer" style="display: none;" class="flex-fill">
 
           <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0"
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0"
             aria-valuemin="0" aria-valuemax="100" style="width:0%">
             </div>
           </div>
@@ -133,18 +139,12 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col"></div>
-          <div class="col-2">
-            <button type="button" id="start" class="button">Aloita tehtävät</button>
-          </div>
-          <div class="col"></div>
-        </div>
+        
       </div>
    
     <footer class="footer mt-auto">
       <img src="../kuvat/logo.png" alt="" id="logo2">
-      <p><i class="far fa-copyright"></i> Muksuvisa corporation</p>
+      <p><i class="far fa-copyright"></i> Muksuvisa</p>
       <p>Matikkavisa 2: Pinja Åman</p>
     </footer>
   </div>

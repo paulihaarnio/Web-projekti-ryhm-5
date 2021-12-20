@@ -70,8 +70,13 @@ function check(){
     }
     
     }
-    
+    //Kun kaikkiin kysymyksiin on vastattu, tekstit häviävät
     if(counter==5){
+        document.getElementById("one").innerHTML=""
+        document.getElementById("two").innerHTML=""
+        document.getElementById("merkki").innerText=""
+        document.getElementById("howmuch").innerText=""
+        document.getElementById("equal").innerText=""
         showResult()
     }
     document.getElementsByClassName("progress-bar").item(0).setAttribute("aria-valuenow",Number(counter*20))

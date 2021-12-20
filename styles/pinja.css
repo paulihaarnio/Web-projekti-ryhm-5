@@ -19,9 +19,7 @@ html body {
     bottom: 0;
     height: 6.9rem;
     width: 100%;
-    padding-left: 1em;
-    background-color: #A3EAFF;
-    border-top: solid #0352fc 4px;
+    
 }
 
 #quizContainer {
@@ -53,6 +51,11 @@ label {
     display: block;
     margin: 5px;
     border-radius: 5px;
+}
+
+#start {
+    width: 150px;
+    text-align: center;
 }
 
 span {
